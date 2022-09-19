@@ -1,4 +1,4 @@
-import{useState} from 'react';
+import{useState, useEffect} from 'react';
 import './App.css';
 
 const Person = (props) => {
@@ -17,6 +17,11 @@ const Person = (props) => {
     const poo="Anna";
     const isUserLoggedIN=true;
     const [counter , setcounter] = useState(0);
+    useEffect(() => {
+      alert('Reload')
+      setcounter(100);
+      alert("You've changed the counter to " + counter)
+    }, [counter])
     return (
      <div className="App">
       <h1>Hello, React!</h1>
