@@ -1,12 +1,12 @@
 import{useState} from 'react';
 import './App.css';
 
-const Person=()=>{
+const Person = (props) => {
   return (
      <>
-      <h1>Name: John</h1>
-      <h2>Last Name: Doe</h2>
-      <h2>Age: 30</h2>
+      <h1>Name: {props.ner}</h1>
+      <h2>Last Name: {props.lastName}</h2>
+      <h2>Age: {props.age}</h2>
      </>
   )}
   const App=()=>{
@@ -29,7 +29,7 @@ const Person=()=>{
         <>
          test
         </>
-      ): (
+      ):(
         <>
           <h1>test</h1>
           <h2>There is a no name</h2>
@@ -45,12 +45,14 @@ const Person=()=>{
           <h2>There is a no name</h2>
         </>
       )}
-      <Person/>
-      <>
-      <button onClick={()=> setcounter((prevCount) => prevCount -1)}>-</button>
-      <h1>{counter}</h1>
-      <button onClick={()=> setcounter((prevCount) => prevCount +1)}>+</button>
-      </>
+      <Person ner={'John'} lastName={'Doe'} age={25}/>
+      <Person ner={'July'} lastName={'Doe'} age={10+10}/>
+      <Person ner={'Jackson'} lastName={'Doe'} age={23}/>
+        <>
+          <button onClick={()=> setcounter((prevCount) => prevCount -1)}>-</button>
+          <h1>{counter}</h1>
+          <button onClick={()=> setcounter((prevCount) => prevCount +1)}>+</button>
+        </>
     </div>
     );
   }
