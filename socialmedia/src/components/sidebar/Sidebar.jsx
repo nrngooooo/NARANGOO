@@ -42,8 +42,72 @@ export default function Sidebar() {
           <hr className="sidebarHr"/>
           <ul className="sidebarFriendList">
             <li className="sidebarFriend">
-              <img className="sidebarFriendImg" src="assets/" alt="" />
-              <span className="sidebarFriendName">Jane Doe</span>
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
+            </li>
+            <li className="sidebarFriend">
+              <img className="sidebarFriendImg" src="/assets/person/2.jpg" alt="" />
+              <span className="sidebarFriendName">Rock</span>
             </li>
           </ul>
         </ul>
