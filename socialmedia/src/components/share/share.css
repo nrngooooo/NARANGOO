@@ -58,3 +58,12 @@
     font-size: 18px;
     margin-right: 3px;
 }
+
+.shareButton{
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: green;
+    font-weight: 500;
+    
+}
