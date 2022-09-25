@@ -16,7 +16,125 @@ export default function Rightbar() {
           <li className="rightbarFriend">
             <div className="rightbarProfileImgContainer">
               <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
             </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li><li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li><li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li><li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
+          </li>
+          <li className="rightbarFriend">
+            <div className="rightbarProfileImgContainer">
+              <img className="rightbarProfileImg" src="/assets/person/3.jpg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">Jackie Chan</span>
           </li>
         </ul>
       </div>
