@@ -13,8 +13,7 @@
     display: flex;
 }
 
-.loginLeft,
-.loginRight{
+.loginLeft,.loginRight{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -33,10 +32,8 @@
 }
 
 .loginBox{
-    margin-top: 40px;
-    height: 350px;
+    height: 400px;
     padding: 20px;
-    width: 400px;
     background-color: white;
     border-radius: 10px;
     display: flex;
