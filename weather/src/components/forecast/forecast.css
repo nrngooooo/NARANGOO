@@ -11,4 +11,27 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-size: 14px;
+    padding: 5px 20px;
+}
+
+.icon-small{
+    width: 40px;
+}
+
+.day{
+    color: #212121;
+    flex: 1 1;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.description{
+    flex: 1 1;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.min-max{
+    color: #757575;
 }
