@@ -18,7 +18,16 @@ const getCuisine = async (name) =>{
     getCuisine(params.type);
     console.log(params.type);
   },[params.type]);
-  return <div></div>
+  return <Grid>
+    {cuisine.map((item) =>{
+        return(
+            <Card key={item.id}>
+                <img src={item.image} alt="" />
+                <h4>{item.title}</h4>
+            </Card>
+        )
+    })}
+  </Grid>
 }
 
 const Grid = styled.div`
@@ -29,9 +38,15 @@ const Grid = styled.div`
 const Card = styled.div`
     img{
         width: 100%
-        border-radius: 2rem;
+        border-radius: 3rem;
     }
-
+    a{
+        text-decoration: none;
+    }
+    h4{
+        text-align: center;
+        padding: 1rem;
+    }
 `;
 
 export default Cuisine
