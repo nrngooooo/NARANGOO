@@ -24,6 +24,8 @@
     "stripe": "^10.15.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "8.26.0",
     "eslint-config-next": "12.3.1"
   }
