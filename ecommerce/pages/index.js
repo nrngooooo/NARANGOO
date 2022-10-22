@@ -1,9 +1,22 @@
-import styles from '../styles/Home.module.css'
+import React from 'react'
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className={styles.container}>
-      
-    </div>
+    <>
+      Herobanner
+      <div>
+        <h2>Best Selling Products</h2>
+        <p>Speakers of many variations</p>
+      </div>
+
+      <div>
+        {['Product 1', 'Product 2'].map(
+          (product) => product)}
+      </div>
+
+      Footer
+    </>
   )
 }
+
+export default Home;
