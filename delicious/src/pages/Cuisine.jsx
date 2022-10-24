@@ -16,7 +16,6 @@ const getCuisine = async (name) =>{
 
   useEffect(() => {
     getCuisine(params.type);
-    console.log(params.type);
   },[params.type]);
   return <Grid>
     {cuisine.map((item) =>{
