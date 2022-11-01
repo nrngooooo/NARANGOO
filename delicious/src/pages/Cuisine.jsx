@@ -37,7 +37,7 @@ const Grid = styled.div`
 const Card = styled.div`
     img{
         width: 100%
-        border-radius: 3rem;
+        border-radius: 4rem;
     }
     a{
         text-decoration: none;
@@ -47,5 +47,4 @@ const Card = styled.div`
         padding: 1rem;
     }
 `;
-
 export default Cuisine
