@@ -1,7 +1,8 @@
 import Category from "./components/Category";
 import Pages from "./pages/Pages";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import Search from "./components/Search";
+import styled from "styled-components";
 
 function App() {
   return (
@@ -14,5 +15,10 @@ function App() {
     </div>
   );
 }
+
+const Logo = styled(Link)`
+  text-decoration: none;
+  font-size: 1.5rem;
+`
 
 export default App;
