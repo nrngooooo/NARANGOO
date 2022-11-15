@@ -18,7 +18,7 @@ export default function Home() {
   },[]);
   return (
     <>
-    <p>{datas && JSON.stringify(datas)}</p>
+    <p>{datas && JSON.stringify(datas)[9]["sumduud"]}</p>
       <Topbar />
       <div className="homeContainer">
         <Sidebar />
