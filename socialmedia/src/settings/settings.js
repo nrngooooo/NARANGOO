@@ -13,8 +13,8 @@ export const sendRequest = async (url, body) => {
       }
       let data = await response.json();
 
-      // Log the data to the console
-      // console.log(data);
+    //   Log the data to the console
+      
       return data;
     } catch (error) {
       console.warn(error);
