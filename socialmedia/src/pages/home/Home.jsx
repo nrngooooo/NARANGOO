@@ -11,15 +11,15 @@ export default function Home() {
 
   useEffect(() => {
     const bodyChiglel = {
-      action: "chiglel",
+      action: "aimagsum",
     };
 
     sendRequest(urlLookup, bodyChiglel).then((data) => setDatas(data));
   },[]);
   return (
     <>
-    <p>{datas && JSON.stringify(datas)[9]["sumduud"]}</p>
-      <Topbar />
+    <p>{datas && JSON.stringify(datas)}</p>
+      <Topbar sumname = {datas && (datas.data[9].sumduud[3]['sumname'])} />
       <div className="homeContainer">
         <Sidebar />
         <Feed />

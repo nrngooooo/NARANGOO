@@ -1,10 +1,10 @@
 import "./topbar.css"
 import {Search,Person,Chat,Notifications} from "@mui/icons-material"
-export default function Topbar() {
+export default function Topbar({sumname}) {
   return (
     <div  className="topbarContainer">
         <div className="topbarLeft">
-          <span className="logo">Narangoosocial</span>
+          <span className="logo">{sumname}</span>
         </div>
         <div className="topbarCenter">
           <div className="searchbar">
