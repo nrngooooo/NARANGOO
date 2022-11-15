@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
     <p>{datas && JSON.stringify(datas)}</p>
-      <Topbar sumname = {datas && (datas.data[9].sumduud[3]['sumname'])} />
+      <Topbar sum = {datas && (datas.data[9].sumduud[3]['sumname'])} />
       <div className="homeContainer">
         <Sidebar />
         <Feed />

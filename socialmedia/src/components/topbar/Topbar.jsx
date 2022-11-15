@@ -1,10 +1,10 @@
 import "./topbar.css"
 import {Search,Person,Chat,Notifications} from "@mui/icons-material"
-export default function Topbar({sumname}) {
+export default function Topbar({sum}) {
   return (
     <div  className="topbarContainer">
         <div className="topbarLeft">
-          <span className="logo">{sumname}</span>
+          <span className="logo">{sum}</span>
         </div>
         <div className="topbarCenter">
           <div className="searchbar">
