@@ -1,3 +1,5 @@
+export const urlLookup = "http://btax.mandakh.org:8000/lookup/";
+
 export const sendRequest = async (url, body) => {
     try {
       let response = await fetch(url, {
@@ -20,4 +22,4 @@ export const sendRequest = async (url, body) => {
       console.warn(error);
     }
   };  
-export const urlLookup = "http://btax.mandakh.org:8000/lookup/";
+
