@@ -58,8 +58,8 @@ export const Posts=[
         photo:"assets/post/2.jpeg",
         date:"2 mins ago",
         userId: 10,
-        like:1000,
-        comment: 600,
+        like:"2.5M",
+        comment: "656K",
     },
     {
         id: 2,

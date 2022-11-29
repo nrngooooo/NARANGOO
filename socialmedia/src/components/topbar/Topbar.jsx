@@ -1,10 +1,12 @@
 import "./topbar.css"
 import {Search,Person,Chat,Notifications} from "@mui/icons-material"
-export default function Topbar() {
+export default function Topbar({ilgeesen}) {
   return (
+    <>
+    {JSON.stringify(ilgeesen)}
     <div  className="topbarContainer">
         <div className="topbarLeft">
-          <span className="logo">Narangoosocial</span>
+          <span className="logo">{ilgeesen.data.username}</span>
         </div>
         <div className="topbarCenter">
           <div className="searchbar">
@@ -23,19 +25,20 @@ export default function Topbar() {
           <div className="topbarIcon">
             <div className="topbarIconItems">
               <Person/>
-              <span className="topbarIconBadge">1</span>
+              <span className="topbarIconBadge">{ilgeesen.data.friendrequest}</span>
             </div>
             <div className="topbarIconItems">
               <Chat/>
-              <span className="topbarIconBadge">3</span>
+              <span className="topbarIconBadge">{ilgeesen.data.sms}</span>
             </div>
             <div className="topbarIconItems">
               <Notifications/>
-              <span className="topbarIconBadge">1</span>
+              <span className="topbarIconBadge">{ilgeesen.data.notif}</span>
             </div>
           </div>
-          <img src="/assets/person/1.png" alt="" className="topbarImg" />
+          <img src={ilgeesen.data.profilephoto} alt="" className="topbarImg" />
         </div>
     </div>
+    </>
   );
 }

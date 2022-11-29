@@ -6,6 +6,7 @@ import "./Home.css"
 import { useState, useEffect } from "react";
 import { sendRequest, urlLookup } from "../../settings/settings"
 import { Button, notification } from 'antd';
+import {resp} from "../../getdata/dummy";
 
 export default function Home() {
   const openNotification = ((title,desc) => {
@@ -39,9 +40,10 @@ export default function Home() {
 
   return (
     <>
+    {JSON.stringify(resp) }
       {DisplayData}
       <p>{datas && JSON.stringify(datas)}</p>
-      <Topbar/>
+      <Topbar ilgeesen={(resp)}/>
       <div className="homeContainer">
         <Sidebar />
         <Feed />
