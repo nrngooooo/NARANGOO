@@ -1,7 +1,7 @@
 import "./sidebar.css"
-import {Users} from "../../dummyData"
+import { Users } from "../../dummyData"
 import CloseFriend from "../closeFriend/CloseFriend"
-import {RssFeed,PlayCircleOutline,Group,Bookmark,HelpOutline,WorkOutline,Event,School} from "@mui/icons-material"
+import { RssFeed, PlayCircleOutline, Group, Bookmark, HelpOutline, WorkOutline, Event, School } from "@mui/icons-material"
 
 export default function Sidebar() {
   return (
@@ -41,10 +41,10 @@ export default function Sidebar() {
             <span className="sidebarListItemText">Courses</span>
           </li>
           <button className="sidebarButton">Show More</button>
-          <hr className="sidebarHr"/>
+          <hr className="sidebarHr" />
           <ul className="sidebarFriendList">
-            {Users.map((u)=>(
-              <CloseFriend key={u.id} user={u}/>
+            {Users.map((u) => (
+              <CloseFriend key={u.id} user={u} />
             ))}
           </ul>
         </ul>
