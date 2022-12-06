@@ -3,9 +3,19 @@ import { Users } from "../../dummyData"
 import CloseFriend from "../closeFriend/CloseFriend"
 import { RssFeed, PlayCircleOutline, Group, Bookmark, HelpOutline, WorkOutline, Event, School } from "@mui/icons-material"
 
-export default function Sidebar() {
+export default function Sidebar({ friends }) {
+  const friendsList = friends.friends.map((items) => {
+    return (
+      <li className="sidebarFriend">
+
+        <img className="sidebarFriendImg" src={items.friendphoto} alt=""></img>
+        <span className="sidebarFriendName">{items.friendname}</span>
+      </li>
+    );
+  })
   return (
     <div className="sidebar">
+      {JSON.stringify(friends)}
       <div className="sidebarWrapper">
         <ul className="sidebarList">
           <li className="sidebarListItem">
@@ -43,6 +53,7 @@ export default function Sidebar() {
           <button className="sidebarButton">Show More</button>
           <hr className="sidebarHr" />
           <ul className="sidebarFriendList">
+          {friendsList}
             {Users.map((u) => (
               <CloseFriend key={u.id} user={u} />
             ))}

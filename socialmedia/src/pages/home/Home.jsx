@@ -6,7 +6,7 @@ import "./Home.css"
 import { useState, useEffect } from "react";
 import { sendRequest, urlLookup } from "../../settings/settings"
 import { Button, notification } from 'antd';
-import { resp } from "../../getdata/dummy";
+import {hariu}  from "../../getdata/dummy";
 
 export default function Home() {
   const openNotification = ((title, desc) => {
@@ -37,24 +37,14 @@ export default function Home() {
       </div>
     )
   });
-  // let friendsList = datas && datas.data.friends.map((items) => {
-  //   return (
-  //     <li className="sidebarFriend">
-  //       <img className="sidebarFriendImg" src={items.friendphoto} alt=""></img>
-  //       <span className="sidebarFriendName">{items.friendname}</span>
-  //     </li>
-  //   );
-  // })
-
   return (
     <>
-      {JSON.stringify(resp)}
+      {JSON.stringify(hariu)}
       {DisplayData}
       <p>{datas && JSON.stringify(datas)}</p>
-      {/* {friendsList} */}
-      <Topbar ilgeesen={(resp)} />
+      <Topbar ilgeesen={(hariu)} />
       <div className="homeContainer">
-        <Sidebar />
+        <Sidebar friends={hariu.data}/>
         <Feed />
         <Rightbar />
       </div>
