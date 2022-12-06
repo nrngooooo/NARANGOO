@@ -46,7 +46,7 @@ export default function Home() {
       <div className="homeContainer">
         <Sidebar friends={hariu.data}/>
         <Feed />
-        <Rightbar />
+        <Rightbar onnz={hariu.data.onlinefriends}/>
       </div>
     </>
   )

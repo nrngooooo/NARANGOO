@@ -7,7 +7,6 @@ export default function Sidebar({ friends }) {
   const friendsList = friends.friends.map((items) => {
     return (
       <li className="sidebarFriend">
-
         <img className="sidebarFriendImg" src={items.friendphoto} alt=""></img>
         <span className="sidebarFriendName">{items.friendname}</span>
       </li>
