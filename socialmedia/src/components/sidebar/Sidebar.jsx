@@ -14,7 +14,7 @@ export default function Sidebar({ friends }) {
   })
   return (
     <div className="sidebar">
-      {JSON.stringify(friends)}
+      {/* {JSON.stringify(friends)} */}
       <div className="sidebarWrapper">
         <ul className="sidebarList">
           <li className="sidebarListItem">

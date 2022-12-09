@@ -6,7 +6,7 @@ import "./Home.css"
 import { useState, useEffect } from "react";
 import { sendRequest, urlLookup } from "../../settings/settings"
 import { Button, notification } from 'antd';
-import {hariu}  from "../../getdata/dummy";
+import {hariu,Posts}  from "../../getdata/dummy";
 
 export default function Home() {
   const openNotification = ((title, desc) => {
@@ -45,8 +45,8 @@ export default function Home() {
       <Topbar ilgeesen={(hariu)} />
       <div className="homeContainer">
         <Sidebar friends={hariu.data}/>
-        <Feed />
-        <Rightbar onnz={hariu.data.onlinefriends}/>
+        <Feed posts={hariu.data} postmedee={(Posts)}/>
+        <Rightbar onlinefriends={hariu.data}/>
       </div>
     </>
   )
