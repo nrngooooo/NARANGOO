@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker add</title>
+</head>
+<body>
+    <h3>Worker app</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="wname" placeholder="Enter WorkerName">
+        <select name="txt_branch">
+            {% for branch in branches %}
+            <option value="{{branch.bid}}">{{branch.bname}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" name="add Worker">
+    </form><br>
+</body>
+</html>

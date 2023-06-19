@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body_block %}
+<div class="jumbotron">
+    {% if registered %}
+    <h1>Бүртгүүлсэнд баярлалаа.</h1>
+    {% else %}
+    <h1>Энд бүртгүүл</h1>
+    <h3>Дараах маягтыг бөглөнө үү:</h3>
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        <input type="submit" name="" value="Бүртгүүлэх">
+    </form>
+    {% endif %}
+</div>
+{% endblock%}

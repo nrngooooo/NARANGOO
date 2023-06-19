@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}Alban{% endblock title %}
+
+{% block content %}
+<h1>Эрдмийн зэрэг</h1>
+<h2>Эрдмийн зэрэг нэмэх</h2>
+<form method="POST">
+    <input type="text" placeholder="Эрдмийн зэргийн нэр" name="txtZereg">
+    <input type="submit" value="Эрдмийн зэрэг нэмэх">
+</form>
+<h2>Эрдмийн зэргийн жагсаалт</h2>
+<table class="table">
+    <tr class="thead-dark">
+        <th>#</th>
+        <th>Эрдмийн зэрэг</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for zereg in tenhims %}
+    <tr>
+        <td>{{zereg.ecode}}</td>
+        <td>{{zereg.ename}}</td>
+        <td>
+            <a href="{{url_for('zereg_edit', id=zereg.ecode)}}"><i class="fa fa-edit"></i></a>
+            <a href="{{url_for('zereg_delete', id=zereg.ecode)}}"><i class="fa-solid fa-eraser"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+<div class="alert alert-success" role="alert">
+    {{msg}}
+</div>
+{% endblock content %}

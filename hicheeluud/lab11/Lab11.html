@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        .one {
+            width: 300px;
+            height: 600px;
+            border: 3px solid green;
+            border-radius: 12px;
+            float: left;
+            margin-top: 30px;
+        }
+        .two {
+            width: 600px;
+            height: 600px;
+            border: solid 1px green;
+            float: left;
+            margin-left: 15px;
+            margin-top: 30px;
+        }
+        .three {
+            width: 300px;
+            height: 600px;
+            border: 3px solid darkred;
+            border-radius: 12px;
+            float: left;
+            margin-left: 15px;
+            margin-top: 30px;
+        }
+
+        a {
+            font-size: 11px;
+            color: #004276;
+            text-decoration: none;
+            padding-top: 20px;
+            padding-left: 0%;
+        }
+       .news1{
+           width: 600px;
+           height: 30px;
+           padding-top: 3px;
+           background-color: white;
+           background-image: linear-gradient(white, blue);
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-family: Arial, Helvetica, sans-serif;
+           color: rgb(4, 4, 150);
+           font-weight: bold;
+           font-size: 20px;
+       }
+       .news2{
+           width: 600px;
+           height: 30px;
+           border-top: solid white 3px;
+           background-color: red;
+           background-image: linear-gradient(red, green, blue);
+           display: flex;
+           justify-content: center;
+           align-items: center;           
+           font-family: Arial, Helvetica, sans-serif;
+           color: rgb(4, 4, 150);
+           font-weight: bold;
+           font-size: 20px;
+       }
+       .news3{
+           width: 600px;
+           height: 30px;
+           border-top: solid yellow 3px;
+           border-bottom: solid yellow 3px;
+           background-color: white;
+           background-image: linear-gradient(white, gray);
+           display: flex;
+           justify-content: center;
+           align-items: center;           
+           font-family: Arial, Helvetica, sans-serif;
+           color: rgb(4, 4, 150);
+           font-weight: bold;
+           font-size: 20px;
+       }
+       .header{
+           width: 600px;
+           height: 50px;
+           background-color: #900;
+           background-image: linear-gradient(to left, #009, #900);
+       }
+       .newspaper {
+           -webkit-column-count: 3;
+           -moz-column-count: 3;
+           column-count: 3;
+           -webkit-column-gap: 40px;
+           -moz-column-gap: 40px;
+           column-gap: 40px;
+           column-rule-style: solid;
+           column-rule-color: blueviolet;
+       }
+       .footer{
+           width: 600px;
+           height: 50px;
+           background-color: #609;
+           background-image: linear-gradient(to top, #609, #C66);
+           margin-top: 20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p style="text-align: center; color: darkred; font-weight: bold;">ШИНЭ МЭДЭЭ</p>
+        <div style="margin-left: 3px; height: 2px; width: 97%; background-color: rgb(187, 184, 184);"></div>
+        <div>
+            <div style="display: flex; margin-left: 8%; margin-top: 15px;">
+                <div style="width: 5px; height: 5px; background-color: #ffae00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;"><a
+                        href="https://www.24tsag.mn/a/34914#:~:text=%D0%95%D0%A0%D3%A8%D0%9D%D0%A5%D0%98%D0%99%D0%9B%D3%A8%D0%93%D0%A7%20%D0%91%D0%9E%D0%9B%D0%96%20%D2%AE%D0%97%D0%AD%D0%A5%D0%98%D0%99%D0%93%20%D0%A5%D2%AE%D0%A1%D0%94%D0%AD%D0%93%20%D0%90.%D0%9C%D3%A8%D0%9D%D0%93%D3%A8%D0%9D%D0%97%D0%A3%D0%9B%D0%AB%D0%9D%20%D0%A2%D0%A3%D0%A5%D0%90%D0%99%2024%20%D0%91%D0%90%D0%A0%D0%98%D0%9C%D0%A2">
+                        Ерөнхийлөгч болж үзэхийг хүсдэг А.Мөнгөнзулын тухай 24 баримт
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #ffae00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://www.24tsag.mn/a/28393#:~:text=%D0%A3%D0%98%D0%A5%2D%D0%AB%D0%9D%20%D0%93%D0%98%D0%A8%D2%AE%D2%AE%D0%9D%20%D0%93.%D0%A3%D0%AF%D0%9D%D0%93%D0%90%2C%20%D0%A1.%D0%9E%D0%94%D0%9E%D0%9D%D0%A2%D0%A3%D0%AF%D0%90%20%D0%9D%D0%90%D0%A0%20%D0%9C%D0%90%D0%A0%D0%A2%D0%90%D0%90%D0%A0%20%D0%A5%D0%98%D0%9B%20%D0%9C%D0%90%D0%9D%D0%90%D0%96%20%D0%91%D0%90%D0%AF%D0%A0%D0%9B%D0%90%D0%96%D0%AD%D0%AD">
+                        УИХ-ын гишүүн Г.Уянга, С.Одонтуяа нар мартаар хил манаж баярлажээ
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #ffae00; margin-top: 8px;"></div>
+                <div style="width: 100%; padding: 0%; margin-left: 10px;">
+                    <a
+                    href="https://news.mn/r/622997/#:~:text=%D0%96%D1%8E%D2%AF%2D%D0%96%D0%B8%D1%86%D2%AF%20%D0%B1%D3%A9%D1%85%D0%B8%D0%B9%D0%BD%20%D0%BD%D0%BE%D0%BC%20%D1%85%D1%8D%D0%B2%D0%BB%D1%8D%D0%B3%D0%B4%D0%B6%D1%8D%D1%8D">
+                    Жюү-Жицү бөхийн ном хэвлэгджээ
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%">
+                <div style="width: 5px; height: 5px; background-color: #ffae00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://news.mn/r/622996/#:~:text=2013.02.26%2D%D0%9D%D0%94%20%D0%9D%D0%98%D0%99%D0%A2%D0%9B%D0%AD%D0%93%D0%94%D0%A1%D0%AD%D0%9D-,%D0%9D%D0%B0%D0%B9%D0%BC%D0%B4%D1%83%D0%B3%D0%B0%D0%B0%D1%80%20%D1%81%D0%B0%D1%80%D0%B0%D0%B0%D1%81%20%D1%85%D0%BE%D0%B9%D1%88%20%D1%82%D3%A9%D1%81%D3%A9%D0%B2%D1%82%20%D1%81%D0%B0%D0%BD%D0%B0%D0%BB%20%D0%B0%D0%B2%D0%B0%D1%85%D0%B3%D2%AF%D0%B9,-%D0%A5%D0%A3%D0%92%D0%90%D0%90%D0%9B%D0%A6%D0%90%D0%A5">
+                        Наймдугаар сараас хойш төсөвт санал авахгүй
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>            
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #ffae00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://news.mn/r/622995/#:~:text=%D0%91%D1%8D%D0%B9%D0%BB%20%D0%B3%D1%83%D1%80%D0%B2%D0%B0%D0%BD%20%D0%BE%D0%BD%D0%BE%D0%BE%20%D0%B0%D0%B2%D1%87%D0%B8%D1%80%D0%BB%D0%B0%D0%B0">
+                        Бэйл гурван оноо авчирлаа
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>    
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #ffae00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="http://www.olloo.mn/n/52543.html#:~:text=%D0%94.%D0%A1%D0%A3%D0%93%D0%90%D0%A0%D0%AB%D0%93%20%E2%80%9C%D0%A1%D0%A3%D0%93%D0%90%D0%9B%D0%90%D0%A5%E2%80%9D%20%D0%91%D0%90%D0%A0%D0%98%D0%9C%D0%A2%20%D0%91.%D0%9C%D3%A8%D0%9D%D0%A5%D0%96%D0%90%D0%A0%D0%93%D0%90%D0%9B%D0%AB%D0%9D%20%D0%93%D0%AD%D0%A0%D0%AD%D0%AD%D0%A1%20%D0%9E%D0%9B%D0%94%D0%A1%D0%9E%D0%9D%20%D0%A3%D0%A3">
+                        Д.Сугарыг "сугалахп баримт Б.Мөнхжаргалын гэрээс олдсон уу?
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #ffae00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://news.mn/r/2487523/#:~:text=%D0%9D.%D0%AD%D0%BD%D1%85%D0%B1%D0%B0%D1%8F%D1%80%D1%8B%D0%BD%20%D1%85%D2%AF%D1%81%D1%8D%D0%BB%20%D0%B1%D0%B8%D0%B5%D0%BB%D1%8D%D0%B2">
+                        Н.Энхбаярын хүсэл биелэв
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #ffae00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://www.abdwap1.me/mp3/mp3/%D0%94-%D0%A1%D1%83%D0%B3%D0%B0%D1%80%D1%8B%D0%BD-%D0%B1%D2%AF%D1%80%D1%8D%D0%BD-%D1%8D%D1%80%D1%85%D0%B8%D0%B9%D0%B3-%D1%82%D2%AF%D0%B4%D0%B3%D1%8D%D0%BB%D0%B7%D2%AF%D2%AF%D0%BB%D1%8D%D1%85%D1%8D%D1%8D%D1%80-%D1%85%D0%B0%D0%BD%D0%B4%D0%B6%D1%8D%D1%8D.html#:~:text=%D8%A8%D8%AD%D8%AB-,%D0%94%20%D0%A1%D1%83%D0%B3%D0%B0%D1%80%D1%8B%D0%BD%20%D0%B1%D2%AF%D1%80%D1%8D%D0%BD%20%D1%8D%D1%80%D1%85%D0%B8%D0%B9%D0%B3%20%D1%82%D2%AF%D0%B4%D0%B3%D1%8D%D0%BB%D0%B7%D2%AF%D2%AF%D0%BB%D1%8D%D1%85%D1%8D%D1%8D%D1%80%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B6%D1%8D%D1%8D,-%D0%94%20%D0%A1%D1%83%D0%B3%D0%B0%D1%80%D1%8B%D0%BD%20%D0%B1%D2%AF%D1%80%D1%8D%D0%BD">
+                        Д.Сугарын бүрэн эрхийг түдгэлзүүлэхээр ханджээ
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="two">
+        <div class="news1">NEWS</div>
+        <div class="news2">NEWS</div>
+        <div class="news3">NEWS</div>
+        <div class="header"></div>
+        <div class="newspaper">
+            <img src="money.jpg" width="193px" height="230px">
+            <p style="margin-top: 0px; color:lightskyblue">Долларын ханш буурч эхэллээ Өнөөдөр 16 цаг 3 минут Ердөө нэг оногийн өмнө 1903 төгрөгт хүрч галзуурч байсан ам долларын канш өнөөдөр 1880 төгрөг болж буурлаа. Яг одоо худалдаа хөгжлийн банкны ам.доллар худалдан авах ханш 1867 төгрөг байгаа бол зарах ханш нь 1880 төгрөгтэй тэнцэж байна . Энэ нь ам.долларын төгрөгтэй харилцах ханш нэг хоногийн дотор 23 төгрөгөөр буурсныг харуулж буй юм. Ченжүүдийн ярьж буйгаар ам.долларын ханш буурах үзэгдэл өчигдөр оройноос эхэлжээ . Энэ нь МАН - ын Бага хурлаас гаргасан шийдвэр нөлөөлсөн байх талтай аж . Ингэхдээ Ардчилсан нам , МАН хамтран Засгийн газрыг
+            байгуулах шийдвэртэй холбоотойгоор эдийн засагт үүсээд байсан хөөсрөл хагарсан байж болохыг зарим эдийн засагч үгүйсгэхгүй байна . Цаашдаа улстөрийн голлох хоёр хучин Засгийн газрыг хамтран байгуулснаар улстерийн тогтвортой байдал бий болж таарна . Энэ нь эргээд Оюутолгой , Тавантолгой зэрэг томоохон төслүүдийг хөдөлгөөнд оруулж , эдийн засгийг тэтгэх хөшүүргүүд бий болох эхлэл ийн тавигдаж байж мэдэх юм.</p>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <div class="three">
+        <p style="text-align: center; font-weight: bold;">ШИНЭ МЭДЭЭ</p>
+        <div style="margin-left: 3px; height: 2px; width: 97%; background-color: rgb(187, 184, 184);"></div>
+        <div>
+            <div style="display: flex; margin-left: 8%; margin-top: 15px;">
+                <div style="width: 5px; height: 5px; background-color: #C00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;"><a
+                        href="https://www.24tsag.mn/a/34914#:~:text=%D0%95%D0%A0%D3%A8%D0%9D%D0%A5%D0%98%D0%99%D0%9B%D3%A8%D0%93%D0%A7%20%D0%91%D0%9E%D0%9B%D0%96%20%D2%AE%D0%97%D0%AD%D0%A5%D0%98%D0%99%D0%93%20%D0%A5%D2%AE%D0%A1%D0%94%D0%AD%D0%93%20%D0%90.%D0%9C%D3%A8%D0%9D%D0%93%D3%A8%D0%9D%D0%97%D0%A3%D0%9B%D0%AB%D0%9D%20%D0%A2%D0%A3%D0%A5%D0%90%D0%99%2024%20%D0%91%D0%90%D0%A0%D0%98%D0%9C%D0%A2">
+                        Ерөнхийлөгч болж үзэхийг хүсдэг А.Мөнгөнзулын тухай 24 баримт
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #C00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://www.24tsag.mn/a/28393#:~:text=%D0%A3%D0%98%D0%A5%2D%D0%AB%D0%9D%20%D0%93%D0%98%D0%A8%D2%AE%D2%AE%D0%9D%20%D0%93.%D0%A3%D0%AF%D0%9D%D0%93%D0%90%2C%20%D0%A1.%D0%9E%D0%94%D0%9E%D0%9D%D0%A2%D0%A3%D0%AF%D0%90%20%D0%9D%D0%90%D0%A0%20%D0%9C%D0%90%D0%A0%D0%A2%D0%90%D0%90%D0%A0%20%D0%A5%D0%98%D0%9B%20%D0%9C%D0%90%D0%9D%D0%90%D0%96%20%D0%91%D0%90%D0%AF%D0%A0%D0%9B%D0%90%D0%96%D0%AD%D0%AD">
+                        УИХ-ын гишүүн Г.Уянга, С.Одонтуяа нар мартаар хил манаж баярлажээ
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #C00; margin-top: 8px;"></div>
+                <div style="width: 100%; padding: 0%; margin-left: 10px;">
+                    <a
+                    href="https://news.mn/r/622997/#:~:text=%D0%96%D1%8E%D2%AF%2D%D0%96%D0%B8%D1%86%D2%AF%20%D0%B1%D3%A9%D1%85%D0%B8%D0%B9%D0%BD%20%D0%BD%D0%BE%D0%BC%20%D1%85%D1%8D%D0%B2%D0%BB%D1%8D%D0%B3%D0%B4%D0%B6%D1%8D%D1%8D">
+                    Жюү-Жицү бөхийн ном хэвлэгджээ
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%">
+                <div style="width: 5px; height: 5px; background-color: #C00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://news.mn/r/622996/#:~:text=2013.02.26%2D%D0%9D%D0%94%20%D0%9D%D0%98%D0%99%D0%A2%D0%9B%D0%AD%D0%93%D0%94%D0%A1%D0%AD%D0%9D-,%D0%9D%D0%B0%D0%B9%D0%BC%D0%B4%D1%83%D0%B3%D0%B0%D0%B0%D1%80%20%D1%81%D0%B0%D1%80%D0%B0%D0%B0%D1%81%20%D1%85%D0%BE%D0%B9%D1%88%20%D1%82%D3%A9%D1%81%D3%A9%D0%B2%D1%82%20%D1%81%D0%B0%D0%BD%D0%B0%D0%BB%20%D0%B0%D0%B2%D0%B0%D1%85%D0%B3%D2%AF%D0%B9,-%D0%A5%D0%A3%D0%92%D0%90%D0%90%D0%9B%D0%A6%D0%90%D0%A5">
+                        Наймдугаар сараас хойш төсөвт санал авахгүй
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>            
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #C00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://news.mn/r/622995/#:~:text=%D0%91%D1%8D%D0%B9%D0%BB%20%D0%B3%D1%83%D1%80%D0%B2%D0%B0%D0%BD%20%D0%BE%D0%BD%D0%BE%D0%BE%20%D0%B0%D0%B2%D1%87%D0%B8%D1%80%D0%BB%D0%B0%D0%B0">
+                        Бэйл гурван оноо авчирлаа
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>    
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #C00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="http://www.olloo.mn/n/52543.html#:~:text=%D0%94.%D0%A1%D0%A3%D0%93%D0%90%D0%A0%D0%AB%D0%93%20%E2%80%9C%D0%A1%D0%A3%D0%93%D0%90%D0%9B%D0%90%D0%A5%E2%80%9D%20%D0%91%D0%90%D0%A0%D0%98%D0%9C%D0%A2%20%D0%91.%D0%9C%D3%A8%D0%9D%D0%A5%D0%96%D0%90%D0%A0%D0%93%D0%90%D0%9B%D0%AB%D0%9D%20%D0%93%D0%AD%D0%A0%D0%AD%D0%AD%D0%A1%20%D0%9E%D0%9B%D0%94%D0%A1%D0%9E%D0%9D%20%D0%A3%D0%A3">
+                        Д.Сугарыг "сугалахп баримт Б.Мөнхжаргалын гэрээс олдсон уу?
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #C00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://news.mn/r/2487523/#:~:text=%D0%9D.%D0%AD%D0%BD%D1%85%D0%B1%D0%B0%D1%8F%D1%80%D1%8B%D0%BD%20%D1%85%D2%AF%D1%81%D1%8D%D0%BB%20%D0%B1%D0%B8%D0%B5%D0%BB%D1%8D%D0%B2">
+                        Н.Энхбаярын хүсэл биелэв
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 8%;">
+                <div style="width: 5px; height: 5px; background-color: #C00; margin-top: 8px;"></div>
+                <div style=" padding: 0%; width: 100%; margin-left: 10px;">
+                    <a
+                        href="https://www.abdwap1.me/mp3/mp3/%D0%94-%D0%A1%D1%83%D0%B3%D0%B0%D1%80%D1%8B%D0%BD-%D0%B1%D2%AF%D1%80%D1%8D%D0%BD-%D1%8D%D1%80%D1%85%D0%B8%D0%B9%D0%B3-%D1%82%D2%AF%D0%B4%D0%B3%D1%8D%D0%BB%D0%B7%D2%AF%D2%AF%D0%BB%D1%8D%D1%85%D1%8D%D1%8D%D1%80-%D1%85%D0%B0%D0%BD%D0%B4%D0%B6%D1%8D%D1%8D.html#:~:text=%D8%A8%D8%AD%D8%AB-,%D0%94%20%D0%A1%D1%83%D0%B3%D0%B0%D1%80%D1%8B%D0%BD%20%D0%B1%D2%AF%D1%80%D1%8D%D0%BD%20%D1%8D%D1%80%D1%85%D0%B8%D0%B9%D0%B3%20%D1%82%D2%AF%D0%B4%D0%B3%D1%8D%D0%BB%D0%B7%D2%AF%D2%AF%D0%BB%D1%8D%D1%85%D1%8D%D1%8D%D1%80%20%D1%85%D0%B0%D0%BD%D0%B4%D0%B6%D1%8D%D1%8D,-%D0%94%20%D0%A1%D1%83%D0%B3%D0%B0%D1%80%D1%8B%D0%BD%20%D0%B1%D2%AF%D1%80%D1%8D%D0%BD">
+                        Д.Сугарын бүрэн эрхийг түдгэлзүүлэхээр ханджээ
+                    </a>
+                    <p style=" width: 90%; margin-top: 0px; text-align: right; padding: 0px; font-size: 11px; color: #85a6bc;">
+                        13 минутын өмнө </p>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>

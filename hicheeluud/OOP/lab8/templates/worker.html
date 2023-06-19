@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        p {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Branch Information</p>
+    {% if workers %}
+    <table class="table">
+        <tr class="table-dark">
+            <th>#</th>
+            <th>Нэр</th>
+            <th>Салбар</th>
+        </tr>
+        {% for worker in workers %}
+        <tr>
+            <td>{{worker.wid}}</td>
+            <td>{{worker.wname}}</td>
+            <td>{{worker.bname}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% else %}
+    <p>No workers found!</p>
+    {% endif %}
+</body>
+
+</html>

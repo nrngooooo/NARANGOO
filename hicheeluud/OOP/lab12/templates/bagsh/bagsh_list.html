@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block title %}Bagsh{% endblock title %}
+
+{% block content %}
+<h1>Багш</h1>
+<a href="{{url_for('bagsh_add')}}">Шинээр багш нэмэх</a>
+<h2>Багш нарын жагсаалт</h2>
+<table class="table">
+    <tr class="thead-dark">
+        <th>Багшийн код</th>
+        <th>Багшийн нэр</th>
+        <th>Хүйс</th>
+        <th>Ажилд орсон огноо</th>
+        <th>Албан тушаал</th>
+        <th>Эрдмийн зэрэг</th>
+        <th>Тэнхимийн харьяалал</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for bagsh in bagshNar %}
+    <tr>
+        <td>{{bagsh.bcode}}</td>
+        <td>{{bagsh.bovog}} {{bagsh.bner}}</td>
+        <td>{{bagsh.gender}}</td>
+        <td>{{bagsh.aognoo}}</td>
+        <td>{{bagsh.atname}}</td>
+        <td>{{bagsh.ename}}</td>
+        <td>{{bagsh.tname}}</td>
+        <td>
+            <a href="{{url_for('bagsh_edit', id=bagsh.id)}}"><i class="fa fa-edit"></i></a>
+            <a href="{{url_for('bagsh_delete', id=bagsh.id)}}" onclick="if (!confirm(' Бичлэгийг устгахдаа та устгахдаа итгэлтэй байна уу?')) { return false }"><i class="fa-solid fa-eraser"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+<div class="alert alert-success" role="alert">
+    {{msg}}
+</div>
+{% endblock content %}

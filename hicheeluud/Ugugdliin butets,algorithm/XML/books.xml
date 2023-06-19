@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <book>
+    <title>Кофе хөрөхөөс өмнө</title>
+    <author>Кавагүчи Тошиказу</author>
+    <genre>Роман</genre>
+    <year>2015</year>
+  </book>
+  <book>
+    <title>Ногоон нүдэн лам</title>
+    <author>Ц.Оюунгэрэл</author>
+    <genre>Тууж</genre>
+    <year>2008</year>
+  </book>
+  <book>
+    <title>Далайн гүн рүү аялсан нь</title>
+    <author>Жюль Верн</author>
+    <genre>Адал явдалт</genre>
+    <year>2009</year>
+  </book>
+  <book>
+    <title>Үзэхийн хязгаар</title>
+    <author>Л.Өлзийтөгс</author>
+    <genre>Түүх</genre>
+    <year>2015</year>
+  </book>
+  <book>
+    <title>Дэлхийг тойрсан 80 хоног</title>
+    <author>Жюль Верн</author>
+    <genre>Замын тэмдэглэл</genre>
+    <year>1970</year>
+  </book>
+</catalog>

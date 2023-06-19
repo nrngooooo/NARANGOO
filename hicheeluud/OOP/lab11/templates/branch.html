@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="bname" placeholder="Salbar neree bichne uu....">
+        <input type="submit" value="Save">
+    </form>
+    {%if salbaruud %}
+    <table>
+        <tr>
+            <th>Salbariin ner</th>
+            <th>Uildel</th>
+        </tr>
+        {% for salbar in salbaruud%}
+        <tr>
+            <td>{{salbar.bname}}</td>
+            <td>
+                <a href="{{url_for('branch_Edit', id=salbar.bid)}}">Edit</a>
+                <a href="{{url_for('branch_Delete', id=salbar.bid)}}">Delete</a>
+            </td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <h1>NO DATA</h1>
+    {%endif%}
+</body>
+</html>

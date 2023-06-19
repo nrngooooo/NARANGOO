@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .one{width: 1000px; height: 1200px; background-color: lightblue; padding-top: 30px; margin-left: 30px;
+            }
+            .two{
+                border: dashed 1px lightblue;
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif; font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="two" style="margin:auto">
+            <p>Нэвтрэх хуудас</p>
+        <div class="one">
+            <form action="" method="post">
+                <fieldset>
+                    <legend style="font-size: 45px;"> Ерөнхий мэдээлэл </legend>
+                        <table>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Овог: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <input type="text" name="lastname" size="30">  </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Нэр: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <input type="text" name="lastname" size="30">  </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Хүйс: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td>
+                                <input type="radio" id="Эрэгтэй" name="fav_language" value="Эрэгтэй">
+                                    <label for="Эрэгтэй">Эрэгтэй</label><br>
+                                <input type="radio" id="Эмэгтэй" name="fav_language" value="Эмэгтэй">
+                                    <label for="Эмэгтэй">Эмэгтэй</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Улс: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td>  
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Mongolia">
+                                    <label for="vehicle1"> Mongolia </label><br>
+                                <input type="checkbox" id="vehicle2" name="vehicle2" value="China">
+                                    <label for="vehicle2"> China </label><br>
+                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Korea">
+                                    <label for="vehicle3"> Korea </label>
+                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Japan">
+                                    <label for="vehicle3"> Japan </label>
+                                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;">  </td>
+                                <td style="color: red; text-align: center;">  </td>
+                                <td> Та одоо оршин суугаа улсаа сонгоно уу. </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Гар утас: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <input type="text" name="lastname" size="30">  </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> User name: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <input type="text" name="lastname" size="30"> @mandakh.edu.mn</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;">  </td>
+                                <td style="color: red; text-align: center;">  </td>
+                                <td> Латин үсгээр a-z, 0-9, ID-ны дунд хэсэгт доогуур зураас болон цэг байж болно. </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Нууц үг: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <input type="text" name="lastname" size="30">  </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;">  </td>
+                                <td style="color: red; text-align: center;">  </td>
+                                <td> Латин үсгээр 6-н тэмдэгтээс багагүй байх шаардлагатай. </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Нууц үгээ давтана уу: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <input type="text" name="lastname" size="30">  </td>
+                            </tr>
+                        </table>
+                        
+                </fieldset>
+                <fieldset>
+                    <legend style="font-size: 45px;"> Нууцлалын хэсэг </legend>
+                        <table>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Нууц асуулт: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <select>
+                                    <option> [сонгох] </option>
+                                    <option> Чи хэдэн онд төрсөн бэ? </option>
+                                    <option> Чи ямар өнгөнд дуртай вэ? </option>
+                                    <option> Чи хэдэн онд төрсөн бэ? </option>
+                                    <option> Чи ямар өнгөнд дуртай вэ? </option>
+                                    </select>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Нууц асуултын хариулт: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <input type="text" name="lastname" size="30">  </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Төрсөн огноо: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <select style="width: 50px;">
+                                    <option> жил </option>
+                                    <option> 2000 </option>
+                                    <option> 2001</option>
+                                    <option> 2002 </option>
+                                    <option> 2003 </option>
+                                    <option> 2004 </option>
+                                    <option> 2005 </option>
+                                    <option> 2006 </option>
+                                    </select>  
+                                 <select style="width: 50px;">
+                                    <option> сар </option>
+                                    <option> 1 </option>
+                                    <option> 2 </option>
+                                    <option> 3 </option>
+                                    <option> 4 </option>
+                                    <option> 5 </option>
+                                    <option> 6 </option>
+                                    <option> 7 </option>
+                                    <option> 8 </option>
+                                    <option> 9 </option>
+                                    <option> 10 </option>
+                                    <option> 11 </option>
+                                    <option> 12 </option>
+                                    </select>  
+                                 <select style="width: 60px;">
+                                    <option> өдөр </option>
+                                    <option> 1 </option>
+                                    <option> 2 </option>
+                                    <option> 3 </option>
+                                    <option> 4 </option>
+                                    <option> 5 </option>
+                                    <option> 6 </option>
+                                    <option> 7 </option>
+                                    <option> 8 </option>
+                                    <option> 9 </option>
+                                    <option> 10 </option>
+                                    </select>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Өөр и-мэйл хаяг: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td> <input type="text" name="lastname" size="30">  </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;">  </td>
+                                <td style="color: red; text-align: center;">  </td>
+                                <td style="width: 500px;"> Нууц үгээ мартсан тохиолдолд дахин сэргээх тухай нууц мэдээллийг бүртгэл
+                                     дууссаны дараа энэ хаягаар илгээх тул и-мейл хаягаа зөв оруулна </td>
+                            </tr>
+
+
+                        </table>
+                </fieldset>
+                <fieldset>
+                    <legend style="font-size: 45px;"> Хувийн мэдээлэл </legend>
+                        <table>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Боловсрол: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td style="width: 100px;"> 
+                                    <select>
+                                    <option> [сонгох] </option>
+                                    <option> Бага </option>
+                                    <option> Дунд </option>
+                                    <option> Дээд </option>
+                                    </select>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Ажил мэргэжил: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td style="width: 100px;"> 
+                                    <select>
+                                    <option> [сонгох] </option>
+                                    <option> Багш </option>
+                                    <option> Сурагч </option>
+                                    <option> Оюутан </option>
+                                    </select>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; text-align: right;"> Ажлын газар: </td>
+                                <td style="color: red; text-align: center;"> * </td>
+                                <td style="width: 100px;"> 
+                                    <select style="width: 200px;">
+                                    <option> [сонгох] </option>
+                                    <option> 123 </option>
+                                    <option> 456 </option>
+                                    <option> 789 </option>
+                                    </select>  
+                                </td>
+                            </tr>
+                        </table>
+                </fieldset>
+                <fieldset>
+                    <legend style="font-size: 45px;"> Үйлчилгээний нөхцөл </legend>
+                        <table>
+                            <tr>
+                                <td> <textarea cols="40" rows="20">  </textarea>  </td>
+                            </tr>
+                            <tr>
+                                <td> <input type="button" value="Зөвшөөрөх">  </td>
+                                <td> <input type="button" value="Татгалзах">  </td>
+                            </tr>
+                        </table>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+    </body>
+</html>
+

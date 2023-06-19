@@ -1,0 +1,27 @@
+<h1>Playlist</h1>
+
+<p>Current song: {{ current_song }}</p>
+
+<ul>
+  {% for song in playlist %}
+    {% if song == current_song %}
+      <li><strong>{{ song }}</strong></li>
+    {% else %}
+      <li>{{ song }}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="song">
+  <select name="command">
+    <option value="add">Add</option>
+    <option value="remove">Remove</option>
+    <option value="next">Next</option>
+    <option value="previous">Previous</option>
+    <option value="current">Current</option>
+    <option value="print">Print</option>
+  </select>
+  <input type="submit"></input>
+</form>

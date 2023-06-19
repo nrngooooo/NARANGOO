@@ -1,0 +1,62 @@
+.main{
+    width: 1400px;
+    height: 1100px;
+    background-color: rgb(68, 67, 67);
+    border: solid 1px;
+}
+.menu{
+    width: 1200px;
+    height: 100px;
+    border: solid 1px;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+#container{
+    margin: auto;
+    width: 1000px;
+    height: 50px;
+    border: solid 1px;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 10px;
+    color: white;
+}
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+        width: 200px;
+        height: 50px;
+        float: left;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        background-color: gainsboro;
+    }         
+    ul li a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        border-left: solid 3px white;
+    }
+    ul li a:hover{
+        background-color: green;
+        color: red;
+    }
+    ul li ul li{
+        display: none;
+        border-bottom: solid 2px white;
+    }
+    ul li:hover ul li{
+        display: block;
+    }
+    .tab{
+        text-align: center;
+        padding: 26px 0;
+    }

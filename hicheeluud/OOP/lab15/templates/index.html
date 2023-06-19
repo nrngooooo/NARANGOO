@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1>Users</h1>
+
+    <div class="container">
+        <h3>Here is our users:</h3>
+        {% if users %}
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>User Name
+                    <a href="{{url_for('asc')}}">&#8593</a>
+                    <a href="{{url_for('desc')}}">&#8595</a>
+                </th>
+                <th>Email Address</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No user FOUND!</p>
+        {% endif %}
+        </br>
+        {{paginate.links}}
+    </div>
+</body>
+
+</html>

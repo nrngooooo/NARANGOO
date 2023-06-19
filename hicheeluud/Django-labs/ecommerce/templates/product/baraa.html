@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h3>{{turul.cname}}-н жагсаалт</h3>
+{% if baraas %}
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>Барааны нэр</th>
+        <th>Үнэ</th>
+        <th>Төрөл</th>
+    </tr>
+
+    {% for baraa in baraas %}
+    <tr>
+        <td>{{baraa.id}}</td>
+        <td>{{baraa.bname}}</td>
+        <td>{{baraa.price}}</td>
+        <td>{{baraa.category}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>Бараа олдсонгүй!!!</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <style>
+  .mySlides {display:none;}
+  .menu {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    opacity: 60%;
+    margin: auto;
+    border: solid 1px;
+    height: 40px;
+    width: 100%;
+  }
+  #container{
+    margin: auto;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 10px;
+    color: white;
+}
+ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+        width: 157px;
+        height: 40px;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        background-color: gainsboro;
+    }         
+    ul li a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        border-left: solid 3px white;
+    }
+    ul li a:hover{
+        background-color: green;
+        color: red;
+    }
+    ul li ul li{
+        display: none;
+        border-bottom: solid 2px white;
+    }
+    ul li:hover ul li{
+        display: block;
+    }
+  </style>
+  </head>
+  
+  <body>
+<body>
+  <div class="menu">
+    <div id="container">
+              <ul>
+                <li><a href="#">v</a></li>
+                <li><a href="#">s</a></li>
+              </ul>
+                <ul>
+                    <li><a href="#">Movie genr</a></li>
+                    <li><a href="#">s</a></li>
+                    <li><a href="#">s</a></li>
+                    <li><a href="#">b</a></li>
+                    <li><a href="#">Movie genr</a></li>
+                    <li><a href="#">s</a></li>
+                </ul>
+    </div>
+</div>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="maxresdefault-2-3.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="Screenshot 2021-12-11 130857.png" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="Screenshot 2021-12-11 132259.png" style="width:100%">
+</div>
+
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);
+  }
+  </script>
+  </body>
+  </html> 
+  

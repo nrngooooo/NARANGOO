@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block title %}Bagsh{% endblock title %}
+{% block content %}
+<h2>Багш</h2>
+<h4>Багш нэмэх</h4>
+<form method="POST">
+    <table>
+        <tr>
+            <td>Багшийн код:</td>
+            <td><input type="text" name="txt_code"></td>
+        </tr>
+        <tr>
+            <td>Багшийн овог: </td>
+            <td><input type="text" name="txt_ovog"></td>
+        </tr>
+        <td>Багшийн нэр: </td>
+        <td><input type="text" name="txt_ner"></td>
+        </tr>
+        <tr>
+            <td>Хүйс: </td>
+            <td>
+                <input type="radio" value="Эр" name="gender">
+                <label>Эр</label><br>
+                <input type="radio" value="Эм" name="gender">
+                <label>Эм</label><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Ажилд орсон:</td>
+            <td><input type="date" name="ajild_orson"></td>
+        </tr>
+        <tr>
+            <td>Тэнхим:</td>
+            <td>
+                <select name="tenhim">
+                    {% for tenhim in tenhims %}
+                    <option value="{{tenhim.tcode}}">{{tenhim.tname}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Албан тушаал:</td>
+            <td>
+                <select name="alban">
+                    {% for alban in albans %}
+                    <option value="{{alban.atcode}}">{{alban.atname}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Зэрэг:</td>
+            <td>
+                <select name="zereg">
+                    {% for zereg in zeregs %}
+                    <option value="{{zereg.ecode}}">{{zereg.ename}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br><input type="submit" value="Нэмэх">
+</form>
+<a href="{{url_for('bagsh_list')}}">Буцах</a>
+{% endblock %}

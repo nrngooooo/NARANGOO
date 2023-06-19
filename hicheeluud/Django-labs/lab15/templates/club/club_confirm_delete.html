@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body_block %}
+<h1>{{ club.cname }}-ийг устгах уу?</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-danger" value="Delete">
+    <a href="{% url 'clubApp:detail' pk=club.pk %}">Цуцлах</a>
+</form>
+{% endblock %}

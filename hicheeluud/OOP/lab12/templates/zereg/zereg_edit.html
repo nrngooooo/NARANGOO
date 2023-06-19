@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Эрдмийн зэрэг</h2>
+
+<h4>Эрдмийн зэрэг засах</h4>
+<form action="" method="POST" style="padding-bottom: 1%;">
+    <input type="text" name="txtZereg" value="{{ename}}">
+    <input type="submit" value="Засах">
+</form>
+<a href="{{url_for('zereg_list')}}">Буцах</a>
+{% endblock %}

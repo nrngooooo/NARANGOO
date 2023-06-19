@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body_block %}
+<div class="jumbotron">
+
+    <h2>Клубын талаар дэлгэрэнгүй</h2>
+    <p>Нэр: {{ clubDetails.cname }}</p>
+    <p>Хаяг: {{ clubDetails.location }}</p>
+    <h3>Жүжигчид:</h3>
+    {% for comedian in clubDetails.clubs.all %}
+    <p>Нэр:{{ comedian.coname }}.</p>
+    {% if comedian.image %}
+    <p><img src="{{comedian.image.url}}" width="100"></p>
+    {% endif %}
+    {% endfor %}
+    <div class="container">
+        <p>
+            <a class="btn btn-warning" href="{% url 'clubApp:update' pk=clubDetails.pk %}">
+                Засах</a>
+            <a class="btn btn-danger" href="{% url 'clubApp:delete' pk=clubDetails.pk %}">
+                Устгах</a>
+        </p>
+
+    </div>
+    <a href="{% url 'clubApp:list' %}">Back</a>
+</div>
+{% endblock %}

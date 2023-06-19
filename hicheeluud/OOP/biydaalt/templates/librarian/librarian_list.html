@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block title %}Librarian{% endblock title %}
+
+{% block content %}
+<h1>Номын санч</h1>
+<a href="{{url_for('librarian_add')}}">Шинэ номын санч нэмэх</a>
+<h2>Номын санч жагсаалт</h2>
+<table class="table table-hover ">
+    <tr style="background-color: rgb(137, 69, 201);">
+        <th>#</th>
+        <th>Номын санчийн код</th>
+        <th>Номын санчийн овог</th>
+        <th>Номын санчийн нэр</th>
+        <th>Утас</th>
+        <th>Гэрийн хаяг</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for librarian in nomiinSanch %}
+    <tr>
+        <td>{{librarian.id}}</td>
+        <td>{{librarian.libcode}}</td>
+        <td>{{librarian.liblast}}</td>
+        <td>{{librarian.libname}}</td>
+        <td>{{librarian.phone}}</td>
+        <td>{{librarian.address}}</td>
+        <td>
+            <a href="{{url_for('librarian_edit', id=librarian.id)}}"><i class="fa fa-edit"></a>
+            <a href="{{url_for('librarian_delete', id=librarian.id)}}" onclick="if (!confirm(' Бичлэгийг устгахдаа та устгахдаа итгэлтэй байна уу?')) { return false }"><i class="fa-duotone fa-trash"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+
+{% endblock content %}

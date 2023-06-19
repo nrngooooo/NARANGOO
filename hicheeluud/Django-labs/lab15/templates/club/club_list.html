@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body_block %}
+<h1>Комеди клубууд!</h1>
+<p><a href="{% url 'clubApp:create' pk=5 %}">Нэмэх</a></p>
+<ol>
+    {% for club in clubList %}
+    <h2>
+        <li>
+            <a href="{{ club.id }}"> {{ club.cname }}</a>
+        </li>
+    </h2>
+    {% endfor %}
+    <a href="/">Back</a>
+</ol>
+{% endblock %}

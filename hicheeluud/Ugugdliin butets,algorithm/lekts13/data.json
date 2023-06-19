@@ -1,0 +1,50 @@
+[
+    {
+        "userid": 1,
+        "id": 1,
+        "name": "Jackie Chan",
+        "professional": "Actor",
+        "age": 69,
+        "country": "China"
+    },
+    {
+        "userid": 1,
+        "id": 2,
+        "name": "Jack Ma",
+        "age": 58,
+        "professional": "Bussiness magnate",
+        "country": "China"
+    },
+    {
+        "userid": 1,
+        "id": 3,
+        "name": "Selena Gomez",
+        "age": 30,
+        "professional": "Actress and Singer",
+        "country": "America"
+    },
+    {
+        "userid": 1,
+        "id": 4,
+        "name": "Robert Downey Jr.",
+        "age": 58,
+        "professional": "Actor",
+        "country": "America"
+    },
+    {
+        "userid": 1,
+        "id": 5,
+        "name": "Mark Zuckerberg",
+        "age": 38,
+        "professional": "Chief Executive Officer of Facebook",
+        "country": "America"
+    },
+    {
+        "userid": 1,
+        "id": 6,
+        "name": "Cristiano Ronaldo",
+        "age": 38,
+        "professional": "Footballer",
+        "country": "Portugal"
+    }
+]

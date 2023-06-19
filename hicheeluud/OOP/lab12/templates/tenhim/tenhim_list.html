@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}Tenhim{% endblock title %}
+
+{% block content %}
+<h1>Тэнхим</h1>
+<h2>Тэнхим нэмэх</h2>
+<form method="POST">
+    <input type="text" placeholder="Тэнхимийн нэр" name="txtTenhim">
+    <input type="submit" value="Тэнхим нэмэх">
+</form>
+<h2>Тэнхимийн жагсаалт</h2>
+<table class="table">
+    <tr class="thead-dark">
+        <th>#</th>
+        <th>Тэнхим</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for tenhim in tenhims %}
+    <tr>
+        <td>{{tenhim.tcode}}</td>
+        <td>{{tenhim.tname}}</td>
+        <td>
+            <a href="{{url_for('tenhim_edit', id=tenhim.tcode)}}"><i class="fa fa-edit"></i></a>
+            <a href="{{url_for('tenhim_delete', id=tenhim.tcode)}}"><i class="fa-solid fa-eraser"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+<div class="alert alert-success" role="alert">
+    {{msg}}
+</div>
+{% endblock content %}

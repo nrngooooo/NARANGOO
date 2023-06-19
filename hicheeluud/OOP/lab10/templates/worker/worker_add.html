@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            margin-top: 5px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h3>Workers</h3>
+    <form method="POST">
+        <input type="text" placeholder="Enter worker name" name="wname">
+        <select name="bid">
+            {% for branch in branches %}
+            <option value="{{branch.bid}}">{{branch.bname}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Add worker">
+    </form>
+    <table class="table">
+        <tr class="table-dark">
+            <th>#</th>
+            <th>Салбарын нэр</th>
+            <th>Ажилтаны нэр</th>
+        </tr>
+        {% for worker in workers %}
+        <tr>
+            <td>{{worker.bid}}</td>
+            <td>{{worker.bname}}</td>
+            <td>{{worker.wname}}</td>
+        </tr>
+        {% endfor %}
+       
+    </table>
+</body>
+</html>

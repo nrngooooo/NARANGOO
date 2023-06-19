@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Багш засах</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <br><input type="text" name="bovog" value="{{bagsh.bovog}}">
+        <br><input type="text" name="bname" value="{{bagsh.bname}}">
+        <br><input type="text" name="email" value="{{bagsh.email}}">
+        <br><input type="text" name="password" value="{{bagsh.password}}">
+        <br><input type="text" name="password_confirm" value="{{bagsh.password_confirm}}">
+        <br><select name="tenhim_id">
+            {% for tenhim in tenhim %}
+            {% if bagsh.tenhim_id == tenhim.id %}
+            <option value="{{tenhim.id}}" selected>{{tenhim.tname}}</option>
+            {% else %}
+            <option value="{{tenhim.id}}">{{tenhim.tname}}</option>
+                {% endif %}
+                {% endfor %}
+        </select>
+        <br><input type="submit" value="Багш засах">
+    </form>
+    <a href="/">Буцах</a>
+
+</body>
+
+</html>

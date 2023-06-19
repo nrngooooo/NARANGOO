@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>lab12</title>
+    <style type="text/css">
+    .dev1{width: 100%;
+height: 600px;
+border:solid 2px red;
+position: absolute;
+background-color: darkorchid;
+top:50px;
+left:200px; opacity: 90%; }
+img{width: 300px; height: 240px;}
+p{font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+color:blue;
+margin-left: 10px;
+margin-top: 10px;}
+button{position: absolute; top:300px; left:500px}
+</style>
+<script>
+function swap(argument) { var zurag1, zurag2, p1,
+zurag1=document.getElementById('zurag1').src;
+zurag2=document.getElementById('zurag2').src;
+document.getElementById('zurag2').src=zurag1;
+document.getElementById('zurag1').src=zurag2
+document.getElementById('p1').style.color="red";
+document.getElementById('p2').style.color="green";
+}
+</script>
+</head>
+<body style="background-image: url('image/zurag4.png'); background-repeat: no-repeat; background-size: 100%;">
+<div class="dev1">
+<div style="border: solid 2px black; width: 300px; height:400px; position: absolute; top: 150px; left:100px;">
+<p id="p1">ГОО САЙХАН ЭКСПЕРТ</p>
+<img id="zurag1" src="zurag1.jpg"> </div>
+<form style="position: absolute; top: 400px; left: 500px; " >
+<input type="button" onclick="swap();" >Click Me!</button></form>
+<div style="border: solid 2px blue; width: 300px; height:400px; position: absolute; top: 150px; left: 650px;">
+<p id="p2">Rapport London брэнд Монголд ирлээ</p>
+<img id="zurag2" src="zurag2.png"> </div></div>
+</body>
+</html>

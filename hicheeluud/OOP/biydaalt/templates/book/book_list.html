@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block title %}Book{% endblock title %}
+
+{% block content %}
+<h1>Ном</h1>
+<a href="{{url_for('book_add')}}">Шинэ ном нэмэх</a>
+<h2>Номын жагсаалт</h2>
+<table class="table table-hover">
+    {% if books %}
+    <tr style="background-color: rgb(137, 69, 201);">
+        <th>Номын код</th>
+        <th>Номын нэр</th>
+        <th>Зохиогчийн нэр</th>
+        <th>Номын төрөл</th>
+        <th>Номын дэд төрөл</th>
+        <th>Номын индекс</th>
+        <th>Хуудасны тоо</th>
+        <th>Номын зураг</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{book.bookcode}}</td>
+        <td>{{book.bookname}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.tname}}</td>
+        <td>{{book.dtname}}</td>
+        <td>{{book.bindex}}</td>
+        <td>{{book.page}}</td>
+        <td><img src="{{book.bookimg}}" width="80" height="80" /></td>
+        <td>
+            <a href="{{url_for('book_edit', id=book.id)}}"><i class="fa fa-edit"></a>
+            <a href="{{url_for('book_delete', id=book.id)}}" onclick="if (!confirm(' Бичлэгийг устгахдаа та устгахдаа итгэлтэй байна уу?')) { return false }"><i class="fa-duotone fa-trash"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+{% if msg%}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+{% endblock content %}

@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Багш</h2>
+<h4>Багш засах</h4>
+<form method="POST">
+<table>
+    <tr>
+        <td>Багшийн код:</td>
+        <td><input type="text" name="txt_code" value="{{bagsh.bcode}}"></td>
+    </tr>
+    <tr>
+        <td>Багшийн овог: </td>
+        <td><input type="text" name="txt_ovog" value="{{bagsh.bovog}}"></td>
+    </tr>
+    <tr>
+        <td>Багшийн нэр: </td>
+        <td><input type="text" name="txt_ner" value="{{bagsh.bner}}"></td>
+    </tr>
+    <tr>
+        <td>Хүйс: </td>
+        {% if bagsh.gender == 'Эр' %}
+        <input type="radio" value="Эр" name="gender" checked>
+        <label>Эр</label>
+        <input type="radio" value="Эм" name="gender" >
+        <label>Эм</label><br>
+        {% else %}
+        <input type="radio" value="Эр" name="gender" >
+        <label>Эр</label>
+        <input type="radio" value="Эм" name="gender" checked>
+        <label>Эм</label><br>
+        {% endif %}
+    </tr>
+    <tr>
+        <td>Ажилд орсон:</td>
+        <td><input type="date" name="ajild_orson" value="{{bagsh.aognoo}}"></td>
+    </tr>
+    <tr>
+        <td>Албан тушаал:</td>
+        <td>
+            <select name="alban">
+                {% for alban in albans %}
+                {% if bagsh.atname == alban.atname %}
+                <option value="{{alban.atcode}}" selected>{{alban.atname}}</option>
+                {% else %}
+                <option value="{{alban.atcode}}">{{alban.atname}}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Эрдмийн зэрэг:</td>
+        <td>
+            <select name="zereg">
+                {% for zereg in zeregs %}
+                {% if bagsh.ename == zereg.ename %}
+                <option value="{{zereg.ecode}}" selected>{{zereg.ename}}</option>
+                {% else %}
+                <option value="{{zereg.ecode}}">{{zereg.ename}}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Тэнхим:</td>
+        <td>
+            <select name="tenhim">
+                {% for tenhim in tenhims %}
+                {% if bagsh.tname == tenhim.tname %}
+                <option value="{{tenhim.tcode}}" selected>{{tenhim.tname}}</option>
+                {% else %}
+                <option value="{{tenhim.tcode}}">{{tenhim.tname}}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </td>
+    </tr>
+    <tr><td><input type="submit" value="Засах"></td></tr>
+</table>
+</form>
+<a href="{{url_for('bagsh_list')}}">Буцах</a>
+{% endblock %}

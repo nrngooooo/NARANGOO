@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family:"montserrat", sans-serif;
+}
+h2{
+    text-align: center;
+}
+h3{
+    margin-left: 10px;
+}
+.setup{
+    margin-left: 10px;
+}
+.look{
+    margin: 10px 0;
+    padding: 8px;
+    width: 15%;
+    font-family: "montserrat", sans-serif;
+    margin-left: 22%;
+}
+.size{
+    margin: 10px 0;
+    padding: 8px;
+    width: 7%;
+    font-family: "montserrat", sans-serif;
+}
+.upper{
+    margin: 10px 0;
+    padding: 8px;
+    width: 10%;
+    background-color: #74b9ff;
+    margin-left: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: "montserrat", sans-serif;
+}
+.upper:hover{
+    background-color: fuchsia;
+    transition: 0.5s;
+    color: white;
+}
+textarea{
+    width: 800px;
+    height: 350px;
+    margin-left: 10%;
+    font-family: "montserrat", sans-serif;
+}
+input[type=reset]
+{
+    margin: 10px 0;
+    padding: 10px;
+    width: 15%;
+    background-color: purple;
+    margin-left: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: "montserrat", sans-serif;
+    margin-left: 34%;
+}
+.normal{
+    margin: 10px 0;
+    padding: 10px;
+    width: 15%;
+    background-color: #74b9ff;
+    margin-left: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: "montserrat", sans-serif;
+}

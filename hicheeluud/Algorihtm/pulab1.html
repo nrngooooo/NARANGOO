@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DICE</title>
+    <style type="text/css">
+        .d1{
+            background-color: linen;
+            height: 300px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute; 
+            left: 100px; 
+            top: 150px;
+            border: solid 1px black; 
+        }
+        .d2{
+            background-color: linen;
+            height: 300px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute; 
+            left: 800px; 
+            top: 150px;
+            border: solid 1px black; 
+        }
+        header{
+            background-color: linen;
+            width: 500px; 
+            height: 130px; 
+            position: absolute; 
+            left: 400px; 
+            top: 0px;
+            border: solid 1px;
+        }
+        .dice-wrapper{
+            width: 90%;
+            display: flex;
+            justify-content: space-around;
+            position:absolute; 
+            top: 60px;
+        }
+        button{
+            height: 50px;
+            width: 120px;
+            background-color:rgb(247, 247, 247);
+            border: none;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);           
+        }
+        button:hover{
+            cursor: pointer;
+            height: 60px;
+            width: 130px;
+        }
+        .shake{
+            animation: shake 0.7s infinite;
+        }
+        @keyframes shake{
+            0%{
+                transform: rotate(100deg);
+            }
+            50%{
+                transform: rotate(-100deg);
+            }
+            100%{
+                transform: rotate(100deg);
+            }
+        }
+        
+    </style>
+</head>
+<body style="background-color: darkorchid" >
+    <div class="d1">
+    <div class="dice-wrapper">
+    <img src="bdice1.png" id="die-1" style="width: 100px; height: 100px;">
+    <img src="bdice2.png" id="die-2" style="width: 100px; height: 100px;">   
+    </div>
+    <p id="total" style="color: black; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: bold;"></p>
+    </div>
+    <div class="d2">
+    <div class="dice-wrapper">
+    <img src="bdice3.png" id="die-3" style="width: 100px; height: 100px;">
+    <img src="bdice4.png" id="die-4" style="width: 100px; height: 100px;">   
+    </div>
+    <p id="totaal" style="color: black; font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: bold;"></p>
+    </div>
+    <button style="position: absolute; bottom: 400px; left: 590px; color: black ;" onclick="roll()">START!</button>
+    <header>
+        <p id="hojil" style="color: black; font-size: 30px; font-weight: bold; font-style: italic; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif Arial, Helvetica, sans-serif; text-align: center; padding-top: 30px; padding-left: 30px;"></p> 
+    </header >
+    <script>
+        let images = ["bdice1.png","bdice2.png","bdice3.png","bdice4.png","bdice5.png","bdice6.png"]
+        let dice=document.querySelectorAll("img") 
+
+        function roll(){
+            dice.forEach(function(die){
+            die.classList.add("shake");
+            });
+
+
+            setTimeout(function(){
+                dice.forEach(function(die){
+                    die.classList.remove("shake");
+                });
+                let dieOneValue=Math.floor(Math.random()*6);
+                let dieTwoValue=Math.floor(Math.random()*6);
+                let dieThreeValue=Math.floor(Math.random()*6);
+                let dieFourValue=Math.floor(Math.random()*6);
+                console.log(dieOneValue,dieTwoValue)
+                document.querySelector("#die-1").setAttribute("src", images[dieOneValue])
+                document.querySelector("#die-2").setAttribute("src", images[dieTwoValue])
+                document.querySelector("#die-3").setAttribute("src", images[dieThreeValue])
+                document.querySelector("#die-4").setAttribute("src", images[dieFourValue])
+                let x=dieOneValue+dieTwoValue+1+1
+                let y=dieThreeValue+dieFourValue+1+1
+                document.querySelector("#total").innerHTML="PLAYER 1 POINTS"+" "+"="+" "+x
+                document.querySelector("#totaal").innerHTML="PLAYER 2 POINTS"+" "+"="+" "+  y
+                if (x>y){
+                        document.querySelector("#hojil").innerHTML="Player 1 хожлоо🎉"
+                    }
+                    else if(x==y){
+                        document.querySelector("#hojil").innerHTML="Оноо тэнцлээ!"
+                    }
+                    else{
+                        document.querySelector("#hojil").innerHTML="Player 2 хожлоо🎉"
+                }
+            },
+            1500
+            )
+        }
+    </script>
+</body>
+</html>

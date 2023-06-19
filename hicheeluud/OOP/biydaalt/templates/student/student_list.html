@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block title %}Oyutan{% endblock title %}
+
+{% block content %}
+<h1>Оюутан</h1>
+<a href="{{url_for('student_add')}}">Шинээр оюутан нэмэх</a>
+<h2>Оюутнуудын жагсаалт</h2>
+{% if students%}
+<table class="table table-hover">
+    <tr style="background-color: rgb(137, 69, 201);">
+        <th>#</th>
+        <th>Оюутны код 
+            <a href="{{url_for('codeasc')}}">&#8593</a>
+            <a href="{{url_for('codedesc')}}">&#8595</a></th>
+        <th>Оюутны овог</th>
+        <th>Оюутны нэр 
+            <a href="{{url_for('asc')}}">&#8593</a>
+            <a href="{{url_for('desc')}}">&#8595</a>
+        </th>
+        <th>Регистрийн дугаар</th>
+        <th>Мэргэжлийн нэр</th>
+        <th>Утас</th>
+        <th>Бүртгүүлсэн огноо</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{student.id}}</td>
+        <td>{{student.stcode}}</td>
+        <td>{{student.stlast}}</td>
+        <td>{{student.stname}}</td>
+        <td>{{student.regdug}}</td>
+        <td>{{student.mname}}</td>
+        <td>{{student.phone}}</td>
+        <td>{{student.bognoo}}</td>
+        <td>
+            <a href="{{url_for('student_edit', id=student.id)}}"><i class="fa fa-edit"></a>
+            <a href="{{url_for('student_delete', id=student.id)}}" onclick="if (!confirm(' Бичлэгийг устгахдаа та устгахдаа итгэлтэй байна уу?')) { return false }"><i class="fa-duotone fa-trash"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+{%endif%}
+</table>
+<br>{{paginate.links}}
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+{% endblock content %}

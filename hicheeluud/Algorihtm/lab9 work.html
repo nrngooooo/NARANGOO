@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ALERT alert()
+        let on = prompt("Та хэдэн онд төрсөн бэ?")
+        let ognoo = new Date().getFullYear();
+        let age = ognoo - on
+        if (age < 18) {
+            alert("Та " + age + " настай тул насанд хүрээгүй байна.")
+        }
+        if (age >= 18) {
+            alert("Та " + age + " настай насанд хүрсэн хүн байна. ")
+        }
+        //ALERT alert()
+        let number = prompt("Ямар нэгэн тоо сонгоно уу?")
+        if (number < 0) {
+            alert("Сөрөг")
+        }
+        else if(number>0){
+            alert("Эерэг")
+        }
+        //ALERT alert 
+        let num=prompt("Дүнгээ оруулна уу?")
+        if(num=(0-59)){
+            alert("F")
+        }else if(num=(60-69)){
+            alert("D")
+        }
+    </script>
+</body>
+
+</html>

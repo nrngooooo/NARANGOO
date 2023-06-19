@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch</title>
+</head>
+<body>
+    <h3>Branch app</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="txt_branch" placeholder="Enter BranchName">
+        <input type="submit" name="add branch">
+    </form><br>
+    {% if branches %}
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Салбарын нэр</th>
+            <th>Үйлдэл</th>
+        </tr>
+        {% for bid, bname in branches %}
+        <tr>
+            <td>{{bid}}</td>
+            <td>{{bname}}</td>
+            <td>
+                <a href="{% url 'branch_edit' bid %}">Edit</a>
+                <a href="{% url 'branch_delete' bid %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>NO BRANCHES</p>
+    {% endif %}
+</body>
+</html>

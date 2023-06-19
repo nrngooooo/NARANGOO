@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body_block %}
+<h1>
+    {% if not form.instance.pk %} Create Club
+    {% else %} Update Club {% endif %}
+</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" class="btn btn-primary" value="Save">
+
+</form>
+{% endblock %}

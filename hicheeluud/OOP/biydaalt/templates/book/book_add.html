@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block title %}Book{% endblock title %}
+{% block content %}
+<h2>Ном</h2>
+<h4>Ном нэмэх</h4>
+<form method="POST" action="" enctype="multipart/form-data">    
+    <table class="table">
+        <tr>
+            <td>Номын код:</td>
+            <td><input class="form-control" type="text" name="code"></td>
+        </tr>
+        <tr>
+            <td>Номын нэр: </td>
+            <td><input class="form-control" type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Зохиогчийн нэр: </td>
+            <td><input class="form-control" type="text" name="author"></td>
+        </tr>
+        <tr>
+            <td>Номын төрөл:</td>
+            <td>
+                <select name="tcode">
+                    {% for turul in turuls %}
+                    <option value="{{turul.tcode}}">{{turul.tname}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Номын дэд төрөл:</td>
+            <td>
+                <select name="dtcode">
+                    {% for dedturul in dedturuls %}
+                    <option value="{{dedturul.dtcode}}">{{dedturul.dtname}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Номын индекс:</td>
+            <td><input class="form-control" type="text" name="bindex"></td>
+        </tr>
+        <tr>
+            <td>Хуудасны тоо:</td>
+            <td><input class="form-control" type="number" name="page"></td>
+        </tr>
+        <tr>
+            <td>Номын зураг:</td>
+            <td><img src="../../static/uploads/1.jpg" id="profile-img-tag" width="120"height="120"/></td>
+            <input type="file" class="form-control"  name="image" id="profile-img">
+        </tr>
+        <tr><td><input type="submit" class="btn btn-primary"  value="Хадгалах" ></td></tr>
+    </table>
+</form><script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#profile-img-tag').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#profile-img").change(function(){
+            readURL(this);
+        });
+    </script>
+<a href="{{url_for('book_list')}}">Буцах</a>
+{% endblock %}

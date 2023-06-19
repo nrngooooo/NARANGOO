@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Номын санч</h2>
+
+<h4>Номын санч засах</h4>
+<form method="POST">
+    <table class="table">
+        <tr>
+            <input type="text" value="{{libcode}}" placeholder="Номын санчийн код" name="txtLcode">
+        </tr>
+        <tr>
+            <input type="text" value="{{liblast}}" placeholder="Номын санчийн овог" name="txtLlast">
+        </tr>
+        <tr>
+            <input type="text" value="{{libname}}" placeholder="Номын санчийн нэр" name="txtLname">
+        </tr>
+        <tr>
+            <input type="number" value="{{phone}}" placeholder="Утас" name="phone">
+        </tr>
+        <tr>
+            <input type="text" value="{{address}}" placeholder="Гэрийн хаяг" name="hayg">
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-primary" value="Номын санч засах" />
+            </td>
+        </tr>
+    </table>
+</form>
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+<a href="{{url_for('mergejil_list')}}">Буцах</a>
+{% endblock %}

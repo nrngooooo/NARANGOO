@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Information</title>
+</head>
+<body>
+  <label for="book-select">Select a book:</label>
+  <select id="book-select" onchange="updateTable()">
+    <option value="{{books.genre}}">--Select a book--</option>
+    {% for book in books %}
+      <option value="{{book.genre}}">{{ book.genre }}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+  <table id="book-table" border="1">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+      <th>Year</th>
+    </tr>
+    {% for book in books %}
+      <tr id="{{ book.genre }}" >
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.genre }}</td>
+        <td>{{ book.year }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <script>
+        function updateTable() {
+            var select = document.getElementById("book-select");
+            var table = document.getElementById("book-table");
+            for (var i = 1; i < table.rows.length; i++) {
+                table.rows[i].style.display = "none";
+            }
+            var selectedTitle = select.options[select.selectedIndex].value;
+            var selectedRow = document.getElementById(selectedTitle);
+            selectedRow.style.display = "table-row";
+        }
+    </script>
+</body>
+</html>

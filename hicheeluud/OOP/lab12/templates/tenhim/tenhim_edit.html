@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Тэнхим</h2>
+
+<h4>Тэнхим засах</h4>
+<form action="" method="POST" style="padding-bottom: 1%;">
+    <input type="text" name="txtTenhim" value="{{tname}}">
+    <input type="submit" value="Засах">
+</form>
+<a href="{{url_for('tenhim_list')}}">Буцах</a>
+{% endblock %}

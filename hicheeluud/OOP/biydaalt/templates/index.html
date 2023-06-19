@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for tanilts in taniltsuulga %}
+<h1>{{tanilts.tanil}}</h1>
+{% endfor %}
+{% for tatailbar in undsentailbar %}
+<p class="lead">{{tatailbar.comm}}
+{% endfor %}
+<ul>
+    {% for too in jagsaalt %}
+    <li>{{too.txt}}</li>
+    {% endfor %}
+</ul>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        {% for erhemzo in zorilgo%}
+        <h2>{{erhemzo.text}}</h2>
+        {% endfor %}
+        {% for erhemtailbar in etailbr%}
+        <p>{{erhemtailbar.tailbar}}</p>
+        {% endfor%}
+    </div>
+    <div class="col-md-4">
+        {% for als in alsiinharaa%}
+        <h2>{{als.tailbr}}</h2>
+        {% endfor %}
+        {% for alstailbr in abtailbar%}
+        <p>{{alstailbr.txt}}</p>
+        {% endfor %}
+    </div>
+    <div class="col-md-4">
+        {% for zurag in zurag%}
+        <img src="{{zurag.zurag}}" width="500" height="350" style="border-radius: 20px;" >
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+<h3>Worker app edit</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="txt_worker" value="{{wname}}">
+        <select name="txt_branch">
+            {% for bname,bid in branches %}
+            {% if worker.bname == branch.bname %}
+            <option value="{{branch.bid}}" selected>{{branch.bname}}</option>
+            {% else %}
+            <option value="{{branch.bid}}">{{branch.bname}}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+        <input type="submit" name="edit worker">
+    </form>

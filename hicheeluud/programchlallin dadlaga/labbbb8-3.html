@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onload</title>
+    <script>
+        var time;
+        function call() { time = setInterval(function () { imageChanger() }, 500); }
+        var i = 0;
+        var path = new Array();
+        path = ["1.jpg",
+            "McLaren_Artura_art_car_3.jpg",
+            "newcar.jpg",
+            "2.jpg",
+            "3.jpg",
+            "4.jpg",
+            "5.png",
+            "5.jpg",
+            "mclaren.png"];
+        function imageChanger() {
+            if (i < path.length - 1) {
+                i++;
+                document.getElementById("image").src = path[i];
+            }
+            else {
+                i = 0;
+                document.getElementById("image").src = path[i];
+            }
+        }
+
+    </script>
+</head>
+<body onload="call()">
+    <p style="color: blueviolet;">Хуудас ачаалласнаас хойш зураг солигдоно </p>
+    <img id="image" height="200" width="400" src="1.jpg" ><br>
+</body>
+</html>

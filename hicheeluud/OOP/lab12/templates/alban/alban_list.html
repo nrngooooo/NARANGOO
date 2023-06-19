@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}Alban{% endblock title %}
+
+{% block content %}
+<h1>Албан тушаал</h1>
+<h2>Албан тушаал нэмэх</h2>
+<form method="POST">
+    <input type="text" placeholder="Албан тушаалын нэр" name="txtAlban">
+    <input type="submit" value="Албан тушаал нэмэх">
+</form>
+<h2>Албан тушаалын жагсаалт</h2>
+<table class="table">
+    <tr class="thead-dark">
+        <th>#</th>
+        <th>Албан тушаал</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for alban in tenhims %}
+    <tr>
+        <td>{{alban.atcode}}</td>
+        <td>{{alban.atname}}</td>
+        <td>
+            <a href="{{url_for('alban_edit', id=alban.atcode)}}"><i class="fa fa-edit"></i></a>
+            <a href="{{url_for('alban_delete', id=alban.atcode)}}"><i class="fa-solid fa-eraser"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+<div class="alert alert-success" role="alert">
+    {{msg}}
+</div>
+{% endblock content %}

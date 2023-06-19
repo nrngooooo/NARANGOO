@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+    <link rel="stylesheet" type="text/css" href="notepadstyle.css">
+</head>
+<body>
+    <h2 style="color: white;">Notepad</h2>
+    <h3 style="color: white;">Tools</h3>
+    <div class="setup">
+        <select class="look" onchange="changeFont(this)">
+            <option value="Arial">Arial</option>
+            <option value="Sans Serif">Sans Serif</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="Impact">Impact</option>
+            <option value="Bookman">Bookman</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Garamond">Garamond</option>
+            <option value="Palatino">Palatino</option>
+            <option value="Georgea">Georgea</option>
+            <option value="Montserrat">Montserrat</option>
+        </select>
+        <select class="size" onchange="changeSize(this)">
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>14</option>
+            <option>16</option>
+            <option>18</option>
+            <option>20</option>
+            <option>22</option>
+            <option>24</option>
+            <option>28</option>
+            <option>36</option>
+            <option>48</option>
+        </select>
+
+        <input type="button" value="Bold" class="upper" onclick="Bold()">
+        <input type="button" value="Italic" class="upper" onclick="Italic()">
+        <input type="button" value="Underline" class="upper" onclick="Underline()">
+        <br><br>
+        <textarea placeholder=" Enter your text here..." id="content" rows="20" cols="100">
+
+        </textarea>
+
+        <input type="reset" value="Clear">
+        <input type="button" value="Reset" class="normal">
+    </div>
+    <script type="text/javascript">
+        function changeFont(font){
+            document.getElementById('content').style.fontFamily=font.value;
+        }
+        function changeSize(n){
+            var s=document.getElementById('content');
+            s.style.fontSize=n.value+'px';
+        }
+        function Bold(){
+            var bol=document.getElementById('content').style.fontWeight
+            ;
+            if(bol=='normal'){
+                document.getElementById('content').style.fontWeight='bold';
+            }
+            else{
+                document.getElementById('content').style.fontWeight='normal';
+            }
+        }
+        function Italic(){
+            var bol=document.getElementById('content').style.fontStyle
+            ;
+            if(bol=='normal'){
+                document.getElementById('content').style.fontStyle='italic';
+            }
+            else{
+                document.getElementById('content').style.fontStyle='normal';
+            }
+        }
+        function Underline(){
+            var bol=document.getElementById('content').style.
+            textDecoration;
+            ;
+            if(bol!=='underline'){
+                document.getElementById('content').style.
+                textDecoration='underline';
+            }
+            else{
+                document.getElementById('content').style.
+                textDecoration='normal';
+            }
+        }
+    </script>
+</body>
+</html>

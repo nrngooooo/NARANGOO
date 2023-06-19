@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оюутан</title>
+</head>
+
+<body>
+    <h3>Оюутан</h3>
+    <a href="create/">Оюутан нэмэх</a>
+    {% if students %}
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Оюутны овог</th>
+            <th>Оюутны нэр</th>
+            <th>Тэнхим</th>
+            <th>Үйлдэл</th>
+        </tr>
+        {% for tbl_student in students %}
+
+        <tr>
+            <td>{{tbl_student.id}}</td>
+            <td>{{tbl_student.stlast}}</td>
+            <td>{{tbl_student.stname}}</td>
+            <td>{{tbl_student.depname}}</td>
+            <td>
+                <a href="edit/{{tbl_student.id}}">Засах</a>
+                <a href="delete/{{tbl_student.id}}">Устгах</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>Оюутан олдсонгүй</p>
+    {% endif %}
+</body>
+
+</html>

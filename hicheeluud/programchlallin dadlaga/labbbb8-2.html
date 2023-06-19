@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onmouse</title>
+    <script>
+        var time;
+        function call() { time = setInterval(function () { imageChanger() }, 300); }
+        var i = 0;
+        var path = new Array();
+        path = ["deep-learning-robot-technology.jpg",
+            "istock.jpg",
+            "tworob.jpg",
+            "bluerob.jpg",
+            "cyborggirl.png",
+            "ferrari.png",
+            "cuterob.jpg",
+            "mclaren.png"];
+        function imageChanger() {
+            if (i < path.length - 1) {
+                i++;
+                document.getElementById("image").src = path[i];
+            }
+            else {
+                i = 0;
+                document.getElementById("image").src = path[i];
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <p style="color: blueviolet;">Зурган дээр mouse байх үед зураг солигдоно</p>
+    <img id="image" height="200" width="400" onmouseover="call()" onmouseleave="clearInterval(time)"
+        src="bluerob.jpg" ><br>
+</body>
+</html>

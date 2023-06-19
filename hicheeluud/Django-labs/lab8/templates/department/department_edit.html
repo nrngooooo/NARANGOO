@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тэнхим</title>
+</head>
+<body>
+    <h3>Тэнхим app edit</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="txtDepname" value="{{depname}}">
+        <input type="submit" name="add department">
+    </form>
+    <a href="/tenhim">Back</a>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Бараа нэмэх</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table>
+            {{iform}}
+        </table>
+        <input type="submit" value="Бараа нэмэх">
+    </form>
+    <h4>Бараанууд:</h4>
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Operations</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.bname}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.category}}</td>
+            <td>
+                <a href="{% url 'update' item.id %}">Edit</a>
+                <a href="{% url 'remove' item.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Буцах</a>
+
+</body>
+
+</html>

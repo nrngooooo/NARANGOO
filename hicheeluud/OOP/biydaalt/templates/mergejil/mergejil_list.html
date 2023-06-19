@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}Mergejil{% endblock title %}
+
+{% block content %}
+<h1>Мэргэжил</h1>
+<a href="{{url_for('mergejil_add')}}">Шинэ мэргэжил нэмэх</a>
+<h2>Мэргэжил жагсаалт</h2>
+<table class="table table-hover ">
+    <tr style="background-color: rgb(137, 69, 201);">
+        <th>#</th>
+        <th>Мэргэжлийн код</th>
+        <th>Мэргэжлийн нэр</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for mergejil in mergejiluud %}
+    <tr>
+        <td>{{mergejil.id}}</td>
+        <td>{{mergejil.mcode}}</td>
+        <td>{{mergejil.mname}}</td>
+        <td>
+            <a href="{{url_for('mergejil_edit', id=mergejil.id)}}"><i class="fa fa-edit"></a>
+            <a href="{{url_for('mergejil_delete', id=mergejil.id)}}" onclick="if (!confirm(' Бичлэгийг устгахдаа та устгахдаа итгэлтэй байна уу?')) { return false }"><i class="fa-duotone fa-trash"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+
+{% endblock content %}

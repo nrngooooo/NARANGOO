@@ -1,0 +1,72 @@
+{% load customtemp %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <p>{{text|tom}}</p>
+    <h1>Өнөөдөр: {{ asd |unuudur }}</h1>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{"Кино үзэх"| upper}}</h5>
+        <p class="card-text"></p>
+        <p class="card-text">
+          <small class="text-muted">{{ "2022-1-6" | dt }}</small>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{"Цанаар гулгах"| upper}}</h5>
+        <p class="card-text"></p>
+        <p class="card-text">
+          <small class="text-muted">{{ "1990-07-11" | dt }}</small>
+        </p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{"Аялалаар явах"| upper}}</h5>
+        <p class="card-text"></p>
+        <p class="card-text">
+          <small class="text-muted">{{ "2022-2-12" | dt }}</small>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{"Суралцах"| upper}}</h5>
+        <p class="card-text"></p>
+        <p class="card-text">
+          <small class="text-muted">{{ "2022-2-12" | dt }}</small>
+        </p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{"Шинэ хэл сурах"| upper}}</h5>
+        <p class="card-text"></p>
+        <p class="card-text">
+          <small class="text-muted">{{ "2022-2-12" | dt }}</small>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{"Ярилцлагад бэлдэх"| upper}}</h5>
+        <p class="card-text"></p>
+        <p class="card-text">
+          <small class="text-muted">{{ "2022-2-12" | dt }}</small>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Тэнхим Index</title>
+</head>
+
+<body>
+    <h3>Тэнхим</h3>
+    <a href="create/">Тэнхим нэмэх</a>
+    <h1>Tэнхимийн жагсаалт:</h1>
+    {% if tenhims %}
+    <table border="1">
+        <thead>
+            <th>#</th>
+            <th>Tэнхимийн нэр</th>
+            <th>Үйлдэл</th>
+        </thead>
+
+        {% for tenhim in tenhims %}
+        <tr>
+            <td>{{ tenhim.id }}</td>
+            <td>{{ tenhim.tname }}</td>
+            <td>
+
+                <a href="{% url 'edit' tenhim.id %}">Засах</a>
+                <a href="{% url 'delete' tenhim.id %}">Устгах</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No websites found</p>
+    {% endif %}
+    <a href="/">Буцах</a>
+</body>
+
+</html>

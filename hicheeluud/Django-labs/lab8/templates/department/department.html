@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тэнхим</title>
+</head>
+<body>
+    <h3>Тэнхим app</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="txtDepname" placeholder="Enter DepartmentName">
+        <input type="submit" name="add department">
+    </form><br>
+    {% if departments %}
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Тэнхимийн нэр</th>
+            <th>Үйлдэл</th>
+        </tr>
+        {% for tbl_department in departments %}
+        <tr>
+            <td>{{tbl_department.id}}</td>
+            <td>{{tbl_department.depname}}</td>
+            <td>
+                <a href="edit/{{tbl_department.id}}">Edit</a>
+                <a href="delete/{{tbl_department.id}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>NO departments</p>
+    {% endif %}
+    <a href="/">Back</a>
+
+</body>
+</html>

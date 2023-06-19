@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block title %}Librarian{% endblock title %}
+
+{% block content %}
+<h1>Номын санч</h1>
+<h2>Номын санч нэмэх</h2>
+<form method="POST">
+    <table class="table">
+        <tr>
+            <td>
+                <input type="text" placeholder="Номын санчийн код" name="txtLcode">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="Номын санчийн овог" name="txtLlast">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="Номын санчийн нэр" name="txtLname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" placeholder="Утас" name="phone">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="Гэрийн хаяг" name="hayg">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-primary" value="Номын санч нэмэх" />
+            </td>
+        </tr>
+
+    </table>
+</form>
+<a href="{{url_for('librarian_list')}}">Буцах</a>
+{% if msg%}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+{% endblock content %}

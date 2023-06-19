@@ -1,0 +1,8 @@
+<Products>
+  <Product id="1001" name="Product 1" price="10">
+    <Category>Category A</Category>
+  </Product>
+  <Product id="1002" name="Product 2" price="20">
+    <Category>Category B</Category>
+  </Product>
+</Products>

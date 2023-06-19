@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Төрөл нэмэх</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table>
+            {{tform}}
+        </table>
+        <input type="submit" value="Төрөл нэмэх">
+    </form>
+    <h4>Төрлүүд:</h4>
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Operations</th>
+        </tr>
+        {% for turul in turuls %}
+        <tr>
+            <td>{{turul.id}}</td>
+            <td>{{turul.catname}}</td>
+            <td>
+                <a href="{% url 'edit' turul.id %}">Edit</a>
+                <a href="{% url 'delete' turul.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Буцах</a>
+
+</body>
+
+</html>

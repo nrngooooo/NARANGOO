@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}Nomiin turul{% endblock title %}
+
+{% block content %}
+<h1>Номын төрөл</h1>
+<a href="{{url_for('turul_add')}}">Шинэ номын төрөл нэмэх</a>
+<h2>Номын төрлийн жагсаалт</h2>
+<table class="table table-hover ">
+    <tr style="background-color: rgb(137, 69, 201);">
+        <th>#</th>
+        <th>Номын төрлийн код</th>
+        <th>Номын төрлийн нэр</th>
+        <th>Үйлдэл</th>
+    </tr>
+    {% for turul in turuluud %}
+    <tr>
+        <td>{{turul.id}}</td>
+        <td>{{turul.tcode}}</td>
+        <td>{{turul.tname}}</td>
+        <td>
+            <a href="{{url_for('turul_edit', id=turul.id)}}"><i class="fa fa-edit"></a>
+            <a href="{{url_for('turul_delete', id=turul.id)}}" onclick="if (!confirm(' Бичлэгийг устгахдаа та устгахдаа итгэлтэй байна уу?')) { return false }"><i class="fa-duotone fa-trash"></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+
+{% endblock content %}

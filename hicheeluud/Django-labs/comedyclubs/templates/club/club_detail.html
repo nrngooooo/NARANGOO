@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body_block %}
+<div class="jumbotron">
+
+    <h2>Клубын талаар дэлгэрэнгүй</h2>
+    <p>Нэр: {{ clubDetails.cname }}</p>
+    <p>Хаяг: {{ clubDetails.location }}</p>
+    <h3>Жүжигчид:</h3>
+    {% for comedian in clubDetails.clubs.all %}
+    <p>Нэр:{{ comedian.coname }}.</p>
+    <p><img src="{{comedian.image.url}}" width="100"></p>
+    {% endfor %}
+    <a href="{% url 'comedyApp:list' %}">Back</a>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+from python_strings import tomuseg, jijiguseg, cap,find,count, tomuu,jijiguu,split,startswith,endswith,replace,partition
+print(tomuseg('txt[]'))
+print(jijiguseg('TXT[]'))
+print(cap('fDDDddddddghghJJJHJHJ HGHGHG'))
+print(find('Hello, Bello Yellow MyLove.','Yellow'))
+print(tomuu("HHHHH"))
+print(jijiguu("iii"))
+print(count("hello world hella, hell hellmya", "hell"))
+print(split("Welcome to my heart"))
+print(startswith("Welcome to my heart","Wel"))
+print(endswith("Welcome to my lifestyle.","lifestyle"))
+print(replace("I love my dog","dog","puppy"))
+print(partition('Hello, welcome to my world.','to my'))

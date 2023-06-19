@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block body_block %}
+<div class="jumbotron">
+    {% if is_login %}
+    <h1>{{message}}</h1>
+    {% elif has_message %}
+    <h1>{{message}}</h1>
+    {% else %}
+    <h1>Нэвтрэнэ үү.</h1>
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <label for="username">Хэрэглэгчийн нэр:</label>
+        <input type="text" name="username" placeholder="Нэр оруулна уу">
+        <label for="password">Нууц үг:</label>
+        <input type="password" name="password">
+        <input type="submit" name="" value="Нэвтрэх">
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

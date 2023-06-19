@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="POST" action="">
+
+        {% csrf_token %}
+        <input type="text" name="txtStlast" placeholder="Оюутаны овог">
+        <input type="text" name="txtStname" placeholder="Оюутаны нэр">
+
+        <select name="depname">
+            {% for tbl_department in departments %}
+            <option value="{{tbl_department.id}}">{{tbl_department.depname}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Оюутан нэмэх">
+    </form>
+</body>
+
+</html>

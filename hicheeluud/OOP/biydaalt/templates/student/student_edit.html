@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Оюутан</h2>
+<h4>Оюутан засах</h4>
+<form method="POST">
+    <table class="table">
+        <tr>
+            <td>Оюутны код:</td>
+            <td><input type="text" name="code" value="{{student.stcode}}"></td>
+        </tr>
+        <tr>
+            <td>Оюутны овог: </td>
+            <td><input type="text" name="ovog" value="{{student.stlast}}"></td>
+        </tr>
+        <tr>
+            <td>Оюутны нэр: </td>
+            <td><input type="text" name="ner" value="{{student.stname}}"></td>
+        </tr>
+        <tr>
+            <td>Регистрийн дугаар: </td>
+            <td><input type="text" name="regdug" value="{{student.regdug}}"></td>
+        </tr>
+        <tr>
+            <td>Мэргэжил:</td>
+            <td>
+                <select name="mergejil">
+                    {% for mergejil in mergejils %}
+                    {% if student.mname == mergejil.mname %}
+                    <option value="{{mergejil.mcode}}" selected>{{mergejil.mname}}</option>
+                    {% else %}
+                    <option value="{{mergejil.mcode}}">{{mergejil.mname}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Утас:</td>
+            <td><input type="number" name="utas" value="{{student.phone}}"></td>
+        </tr>
+        <tr>
+            <td>Бүртгүүлсэн огноо:</td>
+            <td><input type="date" name="burtognoo" value="{{student.bognoo}}"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn btn-primary" value="Засах" /></td>
+        </tr>
+    </table>
+</form>
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+<a href="{{url_for('student_list')}}">Буцах</a>
+{% endblock %}

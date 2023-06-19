@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagsh</title>
+</head>
+
+<body>
+    <h3>Багш</h3>
+    <a href="create/">Багш нэмэх</a>
+    {% if bagshnar %}
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Багшийн овог</th>
+            <th>Багшийн нэр</th>
+            <th>Багшийн email</th>
+            <th>Тэнхим</th>
+            <!-- <th>Нууц үг:</th>
+            <th>Нууц үг давтах:</th> -->
+            <th>Үйлдэл</th>
+        </tr>
+        {% for bagsh in bagshnar %}
+
+        <tr>
+            <td>{{bagsh.id}}</td>
+            <td>{{bagsh.bovog}}</td>
+            <td>{{bagsh.bname}}</td>
+            <td>{{bagsh.email}}</td>
+            <td>{{bagsh.tenhim}}</td>
+            <!-- <td>{{bagsh.password}}</td>
+            <td>{{bagsh.password_confirm}}</td> -->
+            <td>
+
+                <a href="{% url 'update' bagsh.id %}">Засах</a>
+                <a href="{% url 'remove' bagsh.id %}">Устгах</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>Багш олдсонгүй</p>
+    {% endif %}
+    <a href="/">Буцах</a>
+</body>
+
+</html>

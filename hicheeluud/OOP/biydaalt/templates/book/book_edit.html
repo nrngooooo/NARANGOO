@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Ном</h2>
+<h4>Ном өөрчлөх</h4>
+<form method="POST">
+<table class="table">
+    <tr>
+        <td>Номын код:</td>
+        <td><input type="text" name="code" value="{{book.bookcode}}"></td>
+    </tr>
+    <tr>
+        <td>Номын нэр: </td>
+        <td><input type="text" name="name" value="{{book.bookname}}"></td>
+    </tr>
+    <tr>
+        <td>Зохиогчийн нэр: </td>
+        <td><input type="text" name="author" value="{{book.author}}"></td>
+    </tr>
+    <tr>
+        <td>Номын төрөл:</td>
+        <td>
+            <select name="tcode">
+                {% for turul in turuls %}
+                {% if book.tname == turul.tname %}
+                <option value="{{turul.tcode}}" selected>{{turul.tname}}</option>
+                {% else %}
+                <option value="{{turul.tcode}}">{{turul.tname}}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Номын дэд төрөл:</td>
+        <td>
+            <select name="dtcode">
+                {% for dedturul in dedturuls %}
+                {% if book.dtname == dedturul.dtname %}
+                <option value="{{dedturul.dtcode}}" selected>{{dedturul.dtname}}</option>
+                {% else %}
+                <option value="{{dedturul.dtcode}}">{{dedturul.dtname}}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Номын индекс:</td>
+        <td><input type="text" name="bindex" value="{{book.bindex}}"></td>
+    </tr>
+    <tr>
+        <td>Хуудасны тоо:</td>
+        <td><input type="number" name="page" value="{{book.page}}"></td>
+    </tr>
+    <tr><td><input type="submit" class="btn btn-primary"  value="Засах" ></td></tr>
+</table>
+</form>
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+<a href="{{url_for('book_list')}}">Буцах</a>
+{% endblock %}

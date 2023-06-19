@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Мэргэжил</h2>
+
+<h4>Мэргэжил засах</h4>
+<form method="POST">
+    <table class="table">
+        <tr>
+            <input type="text" value="{{mcode}}" placeholder="Мэргэжлийн код" name="txtMcode">
+        </tr>
+        <tr>
+            <input type="text" value="{{mname}}" placeholder="Мэргэжлийн нэр" name="txtMergejil">
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn btn-primary" value="Мэргэжил засах" /></td>
+        </tr>
+    </table>
+</form>
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+<a href="{{url_for('mergejil_list')}}">Буцах</a>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker</title>
+</head>
+<body>
+    {% csrf_token %}
+    <a href="{% url 'ajiltan_nemeh' %}">Шинээр ажилтан нэмэх</a>
+    {% if workers %}
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Ажилтны нэр</th>
+            <th>Салбарын нэр</th>
+            <th>Үйлдэл</th>
+        </tr>
+        {% for worker in workers %}
+        <tr>
+            <td>{{wid}}</td>
+            <td>{{wname}}</td>
+            <td>{{bname}}</td>
+            <td>
+                <a href="{% url 'worker_edit' wid %}">Edit</a>
+                <a href="{% url 'worker_delete' wid %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>NO Workers</p>
+    {% endif %}
+</body>
+</html>

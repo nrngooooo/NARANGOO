@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Playlist</title>
+</head>
+<body>
+	<h1>Playlist</h1>
+	<ul id="playlist"></ul>
+	<button onclick="playPrevious()">Previous</button>
+	<button onclick="playCurrent()">Play</button>
+	<button onclick="playNext()">Next</button>
+	<form onsubmit="return addSong()">
+		<label for="song">Add Song:</label>
+		<input type="text" id="song" name="song">
+		<button type="submit">Add</button>
+	</form>
+
+	<script>
+		var playlist = [];
+		var currentSongIndex = -1;
+
+		function addSong() {
+			var song = document.getElementById("song").value;
+			if (song === "") {
+				alert("Please enter a song");
+				return false;
+			}
+			playlist.push(song);
+			displayPlaylist();
+			return false;
+		}
+
+		function displayPlaylist() {
+			var ul = document.getElementById("playlist");
+			ul.innerHTML = "";
+			for (var i = 0; i < playlist.length; i++) {
+				var li = document.createElement("li");
+				li.appendChild(document.createTextNode(playlist[i]));
+				ul.appendChild(li);
+			}
+		}
+
+		function playCurrent() {
+			if (playlist.length === 0) {
+				alert("Playlist is empty");
+				return;
+			}
+			if (currentSongIndex === -1) {
+				alert("Please select a song");
+				return;
+			}
+			alert("Playing: " + playlist[currentSongIndex]);
+		}
+
+		function playNext() {
+			if (playlist.length === 0) {
+				alert("Playlist is empty");
+				return;
+			}
+			currentSongIndex++;
+			if (currentSongIndex >= playlist.length) {
+				currentSongIndex = 0;
+			}
+			alert("Playing: " + playlist[currentSongIndex]);
+		}
+
+		function playPrevious() {
+			if (playlist.length === 0) {
+				alert("Playlist is empty");
+				return;
+			}
+			currentSongIndex--;
+			if (currentSongIndex < 0) {
+				currentSongIndex = playlist.length - 1;
+			}
+			alert("Playing: " + playlist[currentSongIndex]);
+		}
+	</script>
+</body>
+</html>

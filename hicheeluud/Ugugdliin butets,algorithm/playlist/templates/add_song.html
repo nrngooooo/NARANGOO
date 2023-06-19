@@ -1,0 +1,9 @@
+<h1>Дуу нэмэх</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label for="ad">Song Name:</label>
+    <input type="text" name="song_name">
+    <br>
+    <input type="submit" value="Add Song">
+</form>
+<a href="{% url 'playlist' %}">Back</a>

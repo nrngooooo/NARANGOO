@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker</title>
+</head>
+<body>
+    {% if workers %}
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Ажилтны нэр</th>
+            <th>Салбарын нэр</th>
+        </tr>
+        {% for worker in workers %}
+        <tr>
+            <td>{{worker.id}}</td>
+            <td>{{worker.wname}}</td>
+            <td>{{worker.bname}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>NO Workers</p>
+    {% endif %}
+</body>
+</html>

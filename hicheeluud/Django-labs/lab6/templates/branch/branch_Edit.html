@@ -1,0 +1,6 @@
+<h3>Branch app edit</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="txt_branch" value="{{bname}}">
+        <input type="submit" name="add branch">
+    </form>

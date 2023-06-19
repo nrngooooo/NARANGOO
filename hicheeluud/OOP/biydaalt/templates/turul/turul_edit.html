@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Номын төрөл</h2>
+
+<h4>Номын төрөл засах</h4>
+<form method="POST">
+    <table class="table">
+        <tr>
+            <input type="text" value="{{tcode}}" placeholder="Номын төрлийн код" name="txtCode">
+        </tr>
+        <tr>
+            <input type="text" value="{{tname}}" placeholder="Номын төрлийн нэр" name="txtTurul">
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn btn-primary" value="Номын төрөл засах" /></td>
+        </tr>
+    </table>
+</form>
+{% if msg %}
+<div class="alert alert-dark" role="alert">
+    {{msg}}
+</div>
+{%endif%}
+<a href="{{url_for('turul_list')}}">Буцах</a>
+{% endblock %}
